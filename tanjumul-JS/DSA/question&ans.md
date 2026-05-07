@@ -309,6 +309,8 @@ console.log(bigBoss(10,20,5))
 
 13. Check a number is positive, negative or zero ; 
 
+## Time Complextity will be : o(1)
+
 ```javascript 
 let n = -9; 
 let result; 
