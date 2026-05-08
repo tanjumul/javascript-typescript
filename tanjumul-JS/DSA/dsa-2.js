@@ -140,3 +140,31 @@ console.log(seeYou(0)); */
 
 
 /** check a character is vowel or consonent */
+
+
+let word = [];  
+function takeWord(word){ 
+
+  for (let i =0; i< word.length ; i++){
+    if(word[0] === 'a' || word[0] === 'A'){ 
+      return 'Vowel';
+    }else if (word[0]=== 'e' || word[0] === 'E'){ 
+      return 'Vowel'; 
+    }
+    else if(word[0] === 'i' || word[0] === 'I'){
+      return 'Vowel'; 
+    }
+    else if(word[0] === 'o' || word[0] === 'O'){ 
+      return 'Vowel'; 
+    } else if(word[0] === 'u' || word[0] === 'U'){
+      return 'Vowel'; 
+    }else { 
+      return 'consonent';
+    }
+  }
+  
+
+
+}
+
+console.log(takeWord('Tanjumul')); 
