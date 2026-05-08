@@ -114,26 +114,29 @@ console.log(seeYou(0)); */
 //input unit : 230
 //output = 1500; 
 
-let result = 0; 
-function calculateElectricityBill (unit){ 
+// let result = 0; 
+// function calculateElectricityBill (unit){ 
 
-if(unit <= 100){ 
-result = unit*5;   
-return result; 
-}else if (unit <= 200){ 
-  result = 100*5 + ((unit-100) * 7); 
-  return result; 
-}
-else if (unit<= 300){ 
-result = 100*5 + 100*7 + ((unit-200) * 10); 
-return result; 
+// if(unit <= 100){ 
+// result = unit*5;   
+// return result; 
+// }else if (unit <= 200){ 
+//   result = 100*5 + ((unit-100) * 7); 
+//   return result; 
+// }
+// else if (unit<= 300){ 
+// result = 100*5 + 100*7 + ((unit-200) * 10); 
+// return result; 
 
-} else { 
-  result = 100*5 + 100*7 + 100 * 10 + ((unit-300)*12); 
-}
-return result; 
+// } else { 
+//   result = 100*5 + 100*7 + 100 * 10 + ((unit-300)*12); 
+// }
+// return result; 
 
-}
+// }
 
 
-console.log(calculateElectricityBill(240));
+// console.log(calculateElectricityBill(240));
+
+
+/** check a character is vowel or consonent */

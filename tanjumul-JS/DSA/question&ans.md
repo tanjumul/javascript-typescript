@@ -317,3 +317,37 @@ let result;
 (n>0) ? result = 'Positive': (n<0) ? result = 'Negative' :  result = 'Zero';
  console.log(result);  
 ```
+
+13 . Check the unit price here if it's below 100 then each unit will be 5taka , <br> if it's less than 200 it will cost 7 taka for each units <br> if its below 300 or equal then it will cost you 10 taka , if it's higher than <br> 300 then it will cost 12 taka for each unit. 
+
+  input : 240 
+  output : 1500
+
+```javascript 
+
+
+let result = 0; 
+function calculateElectricityBill (unit){ 
+
+if(unit <= 100){ 
+result = unit*5;   
+return result; 
+}else if (unit <= 200){ 
+  result = 100*5 + ((unit-100) * 7); 
+  return result; 
+}
+else if (unit<= 300){ 
+result = 100*5 + 100*7 + ((unit-200) * 10); 
+return result; 
+
+} else { 
+  result = 100*5 + 100*7 + 100 * 10 + ((unit-300)*12); 
+}
+return result; 
+
+}
+
+
+console.log(calculateElectricityBill(240));
+
+```
