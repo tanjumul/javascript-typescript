@@ -322,6 +322,7 @@ let result;
 
   input : 240 
   output : 1500
+# time complexity : O(1);
 
 ```javascript 
 
