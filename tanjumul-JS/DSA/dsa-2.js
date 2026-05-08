@@ -100,7 +100,14 @@ console.log(bigBoss(10,20,5))
 
 //check a number is it a positve , negative or zero ? 
 
-let n = -9; 
+/*function seeYou(n){ 
+
 let result; 
 (n>0) ? result = 'Positive': (n<0) ? result = 'Negative' :  result = 'Zero';
  console.log(result);  
+
+} 
+
+console.log(seeYou(0)); */ 
+
+
