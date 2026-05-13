@@ -410,3 +410,6 @@ if(isVowel){
   console.log('Consonent'); 
 }
 ```
+
+## Option : 2
+

@@ -170,7 +170,7 @@ console.log(seeYou(0)); */
 // console.log(takeWord('Tanjumul')); 
 
 
-
+/*
 
 let char = ['a' , 'e' , 'i' , 'o' , 'u', 'A','E','I','O','U']; 
 let ch = 'A'; 
@@ -187,3 +187,18 @@ if(isVowel){
 }else{ 
   console.log('Consonent'); 
 }
+  */
+
+
+function checkVowel(char){ 
+
+if(char === 'a' || char === 'e' || char === 'i' || char === 'o' || char === 'u' || char === 'A' || char === 'E' || char === 'I' || char === 'O' || char === 'U') {
+  return 'vowel';
+}
+else{ 
+  return 'Consonent'; 
+}
+
+}
+
+console.log(checkVowel('c'));
