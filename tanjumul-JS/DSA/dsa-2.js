@@ -193,7 +193,7 @@ if(isVowel){
 function checkVowel(char = ' '){ 
 
 
-if(char === 'a' || char === 'e' || char === 'i' || char === 'o' || char === 'u' || char === 'A' || char === 'E' || char === 'I' || char === 'O' || char === 'U') {
+if('aeiou'.includes(char.toLowerCase()) && char!= ' ') {
   return 'vowel';
 }
 else if(/[a-z]/.test(char)){ 
@@ -203,4 +203,4 @@ else if(/[a-z]/.test(char)){
 return 'Not a Valid Alphabet'; 
 }
 
-console.log(checkVowel('2'));
+console.log(checkVowel('1'));

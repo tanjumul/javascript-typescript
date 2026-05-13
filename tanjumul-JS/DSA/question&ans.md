@@ -412,4 +412,21 @@ if(isVowel){
 ```
 
 ## Option : 2
+ ```javascript 
 
+
+function checkVowel(char = ' '){ 
+
+
+if('aeiou'.includes(char.toLowerCase()) && char!= ' ') {
+  return 'vowel';
+}
+else if(/[a-z]/.test(char)){ 
+  return 'Consonent'; 
+}
+
+return 'Not a Valid Alphabet'; 
+}
+
+console.log(checkVowel('1'));
+``` 
