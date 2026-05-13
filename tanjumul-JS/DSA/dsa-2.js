@@ -172,13 +172,18 @@ console.log(seeYou(0)); */
 
 
 
-let char = ['a' , 'e' , 'i' , 'o' , 'u']; 
-let ch = 'b'; 
+let char = ['a' , 'e' , 'i' , 'o' , 'u', 'A','E','I','O','U']; 
+let ch = 'A'; 
+let isVowel = false;
 for(let i =0 ; i<char.length; i++){ 
-   if(char[i]=== ch){ 
-    console.log('Vowel');
-   }else { 
-    console.log('Consonent');
-   }
+  if(char[i]=== ch){
+    isVowel = true;
+    break; 
+  }
 }
 
+if(isVowel){ 
+  console.log('Vowel')
+}else{ 
+  console.log('Consonent'); 
+}
