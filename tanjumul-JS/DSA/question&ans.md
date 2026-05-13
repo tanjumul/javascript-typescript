@@ -389,3 +389,24 @@ function takeWord(word){
 console.log(takeWord('Tanjumul')); 
 
 ```
+
+14.Check if a character is a Vowel or Consonant , combine logical OR || operator and string comparisons. 
+
+```javascript
+
+let char = ['a' , 'e' , 'i' , 'o' , 'u', 'A','E','I','O','U']; 
+let ch = 'A'; 
+let isVowel = false;
+for(let i =0 ; i<char.length; i++){ 
+  if(char[i]=== ch){
+    isVowel = true;
+    break; 
+  }
+}
+
+if(isVowel){ 
+  console.log('Vowel')
+}else{ 
+  console.log('Consonent'); 
+}
+```
