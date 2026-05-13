@@ -190,17 +190,17 @@ if(isVowel){
   */
 
 
-function checkVowel(char){ 
+function checkVowel(char = ' '){ 
 
-  let check = char.toLowerCase();
 
 if(char === 'a' || char === 'e' || char === 'i' || char === 'o' || char === 'u' || char === 'A' || char === 'E' || char === 'I' || char === 'O' || char === 'U') {
   return 'vowel';
 }
-else{ 
+else if(/[a-z]/.test(char)){ 
   return 'Consonent'; 
 }
 
+return 'Not a Valid Alphabet'; 
 }
 
-console.log(checkVowel('c'));
+console.log(checkVowel('2'));
