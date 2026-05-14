@@ -190,17 +190,30 @@ if(isVowel){
   */
 
 
-function checkVowel(char = ' '){ 
+// function checkVowel(char = ' '){ 
 
 
-if('aeiou'.includes(char.toLowerCase()) && char!= ' ') {
-  return 'vowel';
+// if('aeiou'.includes(char.toLowerCase()) && char!= ' ') {
+//   return 'vowel';
+// }
+// else if(/[a-z]/.test(char)){ 
+//   return 'Consonent'; 
+// }
+
+// return 'Not a Valid Alphabet'; 
+// }
+
+// console.log(checkVowel('1'));
+
+
+function check_year(n){ 
+
+  if(n%4  === 0 || (n%100!== 0 && n%400 === 0)){ 
+    return 'Leap Year'
+  }
+
+  return 'Not a Leap Year ! '
+
 }
-else if(/[a-z]/.test(char)){ 
-  return 'Consonent'; 
-}
 
-return 'Not a Valid Alphabet'; 
-}
-
-console.log(checkVowel('1'));
+console.log(check_year(2026))

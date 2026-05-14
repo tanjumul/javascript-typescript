@@ -430,3 +430,28 @@ return 'Not a Valid Alphabet';
 
 console.log(checkVowel('1'));
 ``` 
+
+15. Check n a leap year : 
+input : 2026 
+output : not Leap Year 
+
+remember  
+  - a year is a leap year if it satisfies these conditions : 
+  1.Year%4=== 0; 
+  2.year%100!== 0; 
+  3.year%400=== 0; 
+
+```javascript 
+
+function check_year(n){ 
+
+  if(n%4  === 0 || (n%100!== 0 && n%400 === 0)){ 
+    return 'Leap Year''
+  }
+
+  return 'Not a Leap Year ! ';
+
+}
+
+console.log(check_year(2026));
+```
