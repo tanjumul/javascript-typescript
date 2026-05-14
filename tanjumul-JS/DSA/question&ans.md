@@ -455,3 +455,29 @@ function check_year(n){
 
 console.log(check_year(2026));
 ```
+
+16. Check if a character is uppercase , lowercase , digit or special character
+ -  input : A 
+ -  Output : Uppercase Letter of inputed character
+
+
+ 17.Check Triangle type using slides and angles : 
+ -  input slides = 3,4,5
+ -  output : Right-Angled Triangle 
+
+ example logics : 
+ -  if a^2 + b^2 = c^2  -> right angled 
+ -  Else if all slides equal -> equilateral 
+ -  Else if any two equal -> isosceles 
+ -  Else -> scalene 
+
+ 18. Calculate income tax based on slabs 
+ -  input : income = 750000
+ -  output : tax = 52500 
+
+ examples : 
+  - upto 250000 -- no tax 
+  - 250001 -- 500000 --> 5% 
+  - 500001 -- 1000000 -->20% 
+  - above 100000 -> 30% 
+  
