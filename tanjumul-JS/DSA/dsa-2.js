@@ -205,7 +205,7 @@ if(isVowel){
 
 // console.log(checkVowel('1'));
 
-
+/** 
 function check_year(n){ 
 
   if(n%4  === 0 || (n%100!== 0 && n%400 === 0)){ 
@@ -217,3 +217,7 @@ function check_year(n){
 }
 
 console.log(check_year(2026))
+
+*/ 
+
+
