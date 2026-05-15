@@ -460,6 +460,30 @@ console.log(check_year(2026));
  -  input : A 
  -  Output : Uppercase Letter of inputed character
 
+```javascript 
+
+function checChar(ch){ 
+
+  // if(typeof ch === 'string' && ch.length !>= 1 ){ 
+  //   return 'Enter a valid charecter here not a Word !';
+  // }
+  if ( /[A-Z]/.test(ch)){ 
+    return 'Uppercase Letter';
+  } else if(/[a-z]/.test(ch)){ 
+    return 'Lowercase Letter';
+  } else if (/[0-9]/.test(ch)){ 
+    return 'Digit';
+  } else {
+    return 'Special Character';
+  }
+
+
+}
+console.log(checChar('a'));
+console.log(checChar('U')); 
+console.log(checChar('7')); 
+console.log(checChar('$'));
+```
 
  17.Check Triangle type using slides and angles : 
  -  input slides = 3,4,5
@@ -480,4 +504,3 @@ console.log(check_year(2026));
   - 250001 -- 500000 --> 5% 
   - 500001 -- 1000000 -->20% 
   - above 100000 -> 30% 
-  

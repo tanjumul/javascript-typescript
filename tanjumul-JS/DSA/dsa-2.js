@@ -221,3 +221,24 @@ console.log(check_year(2026))
 */ 
 
 
+function checChar(ch){ 
+
+  // if(typeof ch === 'string' && ch.length !>= 1 ){ 
+  //   return 'Enter a valid charecter here not a Word !';
+  // }
+  if ( /[A-Z]/.test(ch)){ 
+    return 'Uppercase Letter';
+  } else if(/[a-z]/.test(ch)){ 
+    return 'Lowercase Letter';
+  } else if (/[0-9]/.test(ch)){ 
+    return 'Digit';
+  } else {
+    return 'Special Character';
+  }
+
+
+}
+console.log(checChar('a'));
+console.log(checChar('U')); 
+console.log(checChar('7')); 
+console.log(checChar('$'));

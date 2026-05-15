@@ -1,4 +1,3 @@
-
-    // for(let j = 0; j<n.length; j++){ 
-    //  console.log(n[j]); 
-    // }
+  // if(typeof ch === 'string' || ch.length !== 1 ){ 
+  //   return 'Enter a valid charecter here not a Word !';
+  // }
