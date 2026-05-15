@@ -35,7 +35,7 @@ function blueface(input){
 blueface(6);
 */ 
 
-
+/*
 function printStars(input) {
   for (let i = 0; i < input; i++) {  
     let row = '';
@@ -48,4 +48,36 @@ function printStars(input) {
 
 printStars(5);
 
+*/ 
 
+/*
+function namStar(row){
+
+for (let i =0; i<row ; i++){ 
+  let line = '';
+  for(let j = 0 ; j <= i; j++){
+    line += '*'; 
+  }
+  console.log(line);
+}
+
+} 
+
+namStar(4); 
+*/ 
+
+
+
+function namStar(row){
+
+for (let i =0; i<row ; i++){ 
+  let line = '';
+  for(let j = 0 ; j <= i; j++){
+    line += '*'; 
+  }
+  console.log(line);
+}
+
+} 
+
+namStar(4); 

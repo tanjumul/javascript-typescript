@@ -530,3 +530,38 @@ console.log(taxCollecton(750000));
 
 
 ```  
+
+19. print this pattern  : 
+``` javascript 
+
+*
+**
+***
+****
+``` 
+
+## code is : 
+```javascript 
+function namStar(row){
+
+for (let i =0; i<row ; i++){ 
+  let line = '';
+  for(let j = 0 ; j <= i; j++){
+    line += '*'; 
+  }
+  console.log(line);
+}
+
+} 
+
+namStar(4); 
+```
+
+20. Print this pattern : 
+```javascript
+
+```
+
+```javascript 
+
+```
