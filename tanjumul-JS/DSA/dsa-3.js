@@ -83,6 +83,7 @@ for (let i =0; i<row ; i++){
 namStar(4); 
 */ 
 
+/*
 function backStar(str){ 
 
   for(let i =str; i>=1; i-- ){ 
@@ -96,3 +97,39 @@ console.log(lines);
 
 }
 backStar(5); 
+
+*/ 
+
+
+// function strBrow(row){ 
+
+// for(let i =1; i<=row; i++){ 
+//  let str = ''; 
+//  for(let j =1; j<=i; j++){ 
+//   str+='*'; 
+//  }
+//  console.log(str); 
+// }
+
+// }
+// strBrow(5);
+
+
+
+function strBrow(row) { 
+
+  for(let i=1; i<=row; i++){ 
+    let str = ''; 
+    for(let s =1; s<=row-i; s++){ 
+      str+= ' '; 
+    }
+    for(let j = 1; j<=(2*i)-1; j++){ 
+      str+='*'; 
+    }
+    console.log(str); 
+  } 
+  }
+strBrow(5);
+
+
+
