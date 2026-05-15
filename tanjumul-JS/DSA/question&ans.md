@@ -497,10 +497,36 @@ console.log(checChar('$'));
 
  18. Calculate income tax based on slabs 
  -  input : income = 750000
- -  output : tax = 52500 
+ -  output : tax = 62500 
 
  examples : 
   - upto 250000 -- no tax 
   - 250001 -- 500000 --> 5% 
   - 500001 -- 1000000 -->20% 
   - above 100000 -> 30% 
+
+``` javascript 
+
+
+function taxCollecton(salary){ 
+let cal = 0; 
+  if (salary <= 250000){
+    return 0; 
+  } else if(salary > 250000 && salary <= 500000){
+    cal = (salary - 250000)*0.05
+    return cal
+  }
+ else if( salary > 500000 && salary <= 1000000){
+  cal = (250000 * 0.05) + (salary - 500000) * 0.20 ;
+  return cal ; 
+}
+else {
+   return cal = (250000 * 0.05) + (500000 * 0.20) + (salary - 1000000) * 0.30 ; 
+}
+
+}
+
+console.log(taxCollecton(750000));
+
+
+```  
