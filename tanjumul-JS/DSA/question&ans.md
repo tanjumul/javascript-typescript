@@ -559,9 +559,26 @@ namStar(4);
 
 20. Print this pattern : 
 ```javascript
-
+*****
+****
+***
+**
+*
 ```
 
 ```javascript 
 
+function backStar(str){ 
+
+  for(let i =str; i>=1; i-- ){ 
+   let lines = ''; 
+    for(let j = i; j>=1; j--){ 
+      lines += '*';  
+    }
+console.log(lines); 
+  }
+
+
+}
+backStar(5); 
 ```

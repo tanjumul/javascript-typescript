@@ -67,7 +67,7 @@ namStar(4);
 */ 
 
 
-
+/*
 function namStar(row){
 
 for (let i =0; i<row ; i++){ 
@@ -81,3 +81,18 @@ for (let i =0; i<row ; i++){
 } 
 
 namStar(4); 
+*/ 
+
+function backStar(str){ 
+
+  for(let i =str; i>=1; i-- ){ 
+   let lines = ''; 
+    for(let j = i; j>=1; j--){ 
+      lines += '*';  
+    }
+console.log(lines); 
+  }
+
+
+}
+backStar(5); 
