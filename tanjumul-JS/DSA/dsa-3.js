@@ -212,6 +212,7 @@ torBrow(15);
 // rowCollaps(5);
 
 
+/*
 function pyramid(row){ 
 
 for(let i =0; i<=row; i++){ 
@@ -221,13 +222,36 @@ let lines = '';
   }
   for(let s=1; s<=(2*i)-1; s++ ){ 
     (s === 1 ||  s === (2*i)-1  || i === row ) ? lines+= '*' : lines+=' ';  
-    
   }
   console.log(lines); 
 }
 
 }
 
-pyramid(6);
+pyramid(5);
 
 
+*/ 
+
+
+function binaryPrint(row){ 
+
+  for(let i =1; i<=row; i++){ 
+    let str = ''; 
+      for(let j=0; j<i; j++){ 
+       if((i + j) % 2 !== 0){ 
+        str+='1';
+        } else 
+        { 
+          str+= '0'; 
+        }
+        if (j<i-1) { 
+          str+= ' '; 
+        }
+      } 
+      console.log(str); 
+  }
+
+}
+
+binaryPrint(5);
