@@ -582,3 +582,32 @@ console.log(lines);
 }
 backStar(5); 
 ```
+
+21. Print this pattern : 
+```javascript
+    *
+   ***
+  *****
+ *******
+*********
+```
+
+```javascript
+
+function torBrow(row){ 
+
+  for(let i =0; i<=row; i++){ 
+    let lines = ''; 
+    for(let j = 0; j<=row-i; j++){
+      lines += ' ';
+    }
+    for(s=1; s<=(2*i)-1; s++){ 
+      lines+='*'; 
+    }
+    console.log(lines); 
+  }
+
+}
+
+torBrow(5);
+```
