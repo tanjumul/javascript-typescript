@@ -233,7 +233,7 @@ pyramid(5);
 
 */ 
 
-
+/*
 function binaryPrint(row){ 
 
   for(let i =1; i<=row; i++){ 
@@ -255,3 +255,22 @@ function binaryPrint(row){
 }
 
 binaryPrint(5);
+
+*/ 
+
+function hollow(row){ 
+  for(let i =row; i>=0; i--){ 
+    let str = ''; 
+    for(let s =1; s<=row-i; s++){ 
+      str +=' ';
+    }
+      for(let j =1; j<=(2*i)-1; j++){ 
+        11
+        str += '*';
+  
+      }  
+      console.log(str); 
+  }
+}
+
+hollow(5);

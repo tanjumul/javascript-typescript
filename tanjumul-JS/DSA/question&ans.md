@@ -703,3 +703,33 @@ function pyramid(row){
 
 pyramid(6);
 ```
+
+24. make an inverted pyramid : 
+```javascript 
+function hollow(row){ 
+  for(let i =row; i>=0; i--){ 
+    let str = ''; 
+    for(let s =1; s<=row-i; s++){ 
+      str +=' ';
+    }
+      for(let j =1; j<=(2*i)-1; j++){ 
+        11
+        str += '*';
+  
+      }  
+      console.log(str); 
+  }
+}
+
+hollow(5);
+``` 
+
+## output :
+
+```javascript 
+*********
+ *******
+  *****
+   ***
+    *
+```
