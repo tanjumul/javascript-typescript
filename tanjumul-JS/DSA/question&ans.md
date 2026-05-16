@@ -642,3 +642,32 @@ function torrent(row){
 }
 torrent(10)
 ```
+
+23. Solve this pattern : 
+```javascript 
+*****
+*   *
+*   *
+*   *
+***** 
+```
+## my solve : 
+
+```javascript 
+
+function rowCollaps(row){ 
+
+  for(let i =0; i<row; i++){ 
+    let str = ''; 
+
+    for(let j=0; j<row; j++){
+     (i === 0 || i === row-1 || j === 0 || j === row-1) ? str+='*' : str+=' ';
+
+    }
+      console.log(str); 
+  }
+
+}
+
+rowCollaps(5);
+```
