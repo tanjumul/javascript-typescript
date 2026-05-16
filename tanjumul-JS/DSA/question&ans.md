@@ -611,3 +611,63 @@ function torBrow(row){
 
 torBrow(5);
 ```
+
+
+22. Print this pattern  : 
+```javascript
+*********
+ *******
+  *****
+   ***
+    *
+```
+solve  : 
+
+```javascript 
+
+function torrent(row){ 
+
+  for(let i = row; i>0; i--){ 
+    let lines = ''; 
+      for(let j=0; j<=row-i; j++){ 
+        lines +=' '; 
+      }
+        for(let k =1; k<=(2*i)-1; k++){ 
+          lines +='*'; 
+        }
+        console.log(lines);
+  }
+
+
+}
+torrent(10)
+```
+
+23. Solve this pattern : 
+```javascript 
+*****
+*   *
+*   *
+*   *
+***** 
+```
+## my solve : 
+
+```javascript 
+
+function rowCollaps(row){ 
+
+  for(let i =0; i<row; i++){ 
+    let str = ''; 
+
+    for(let j=0; j<row; j++){
+     (i === 0 || i === row-1 || j === 0 || j === row-1) ? str+='*' : str+=' ';
+
+    }
+      console.log(str); 
+  }
+
+}
+
+rowCollaps(5);
+```
