@@ -733,3 +733,40 @@ hollow(5);
    ***
     *
 ```
+
+25.Make a inverted hollow : 
+
+```javascript 
+
+function hollow(row){ 
+  for(let i =row; i>=0; i--){ 
+    let str = ''; 
+    for(let s =1; s<=row-i; s++){ 
+      str +=' ';
+    }
+      for(let j =1; j<=(2*i)-1; j++){ 
+       
+        if(j == 1 || j == (2*i)-1 || i == row){ 
+           str += '*';
+        }else { 
+          str+=' '; 
+        }
+       
+  
+      }  
+      console.log(str); 
+  }
+}
+
+hollow(5);
+```
+
+## output:
+
+```javascript 
+*********
+ *     *
+  *   *
+   * *
+    *
+```

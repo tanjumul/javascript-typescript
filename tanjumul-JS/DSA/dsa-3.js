@@ -265,8 +265,13 @@ function hollow(row){
       str +=' ';
     }
       for(let j =1; j<=(2*i)-1; j++){ 
-        11
-        str += '*';
+       
+        if(j == 1 || j == (2*i)-1 || i == row){ 
+           str += '*';
+        }else { 
+          str+=' '; 
+        }
+       
   
       }  
       console.log(str); 
