@@ -131,7 +131,7 @@ backStar(5);
 //   }
 // strBrow(5);
 
-
+/*
 function torBrow(row){ 
 
   for(let i =0; i<=row; i++){ 
@@ -150,3 +150,44 @@ function torBrow(row){
 torBrow(5);
 
 
+*/
+
+/*
+function torBrow(row){ 
+
+  for(let i =0; i<=row; i++){ 
+    let lines = ''; 
+    for(let j = 0; j<=row-i; j++){
+      lines += ' ';
+    }
+    for(s=1; s<=(2*i)-1; s++){ 
+      lines+='*'; 
+    }
+    console.log(lines); 
+    
+  }
+
+}
+
+torBrow(15);
+
+*/ 
+
+
+
+// function torrent(row){ 
+
+//   for(let i = row; i>0; i--){ 
+//     let lines = ''; 
+//       for(let j=0; j<=row-i; j++){ 
+//         lines +=' '; 
+//       }
+//         for(let k =1; k<=(2*i)-1; k++){ 
+//           lines +='*'; 
+//         }
+//         console.log(lines);
+//   }
+
+
+// }
+// torrent(10)

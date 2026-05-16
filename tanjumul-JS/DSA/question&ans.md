@@ -611,3 +611,34 @@ function torBrow(row){
 
 torBrow(5);
 ```
+
+
+22. Print this pattern  : 
+```javascript
+*********
+ *******
+  *****
+   ***
+    *
+```
+solve  : 
+
+```javascript 
+
+function torrent(row){ 
+
+  for(let i = row; i>0; i--){ 
+    let lines = ''; 
+      for(let j=0; j<=row-i; j++){ 
+        lines +=' '; 
+      }
+        for(let k =1; k<=(2*i)-1; k++){ 
+          lines +='*'; 
+        }
+        console.log(lines);
+  }
+
+
+}
+torrent(10)
+```
