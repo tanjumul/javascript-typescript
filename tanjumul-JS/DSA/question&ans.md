@@ -671,3 +671,35 @@ function rowCollaps(row){
 
 rowCollaps(5);
 ```
+
+23. Solve this problem : 
+```javascript 
+     *
+    * *
+   *   *
+  *     *
+ *       *
+***********
+```
+## my kinda solve : 
+
+```javascript 
+   
+function pyramid(row){ 
+
+  for(let i =0; i<=row; i++){ 
+    let lines = ''; 
+      for(let j=0;j<row-i; j++){ 
+        lines += ' '; 
+      }
+      for(let s=1; s<=(2*i)-1; s++ ){ 
+        (s === 1 ||  s === (2*i)-1  || i === row ) ? lines+= '*' : lines+=' ';  
+        
+      }
+      console.log(lines); 
+  }
+
+}
+
+pyramid(6);
+```

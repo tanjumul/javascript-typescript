@@ -195,18 +195,39 @@ torBrow(15);
 
 
 
-function rowCollaps(row){ 
+// function rowCollaps(row){ 
 
-  for(let i =0; i<row; i++){ 
-    let str = ''; 
+//   for(let i =0; i<row; i++){ 
+//     let str = ''; 
 
-    for(let j=0; j<row; j++){
-     (i === 0 || i === row-1 || j === 0 || j === row-1) ? str+='*' : str+=' ';
+//     for(let j=0; j<row; j++){
+//      (i === 0 || i === row-1 || j === 0 || j === row-1) ? str+='*' : str+=' ';
 
-    }
-      console.log(str); 
+//     }
+//       console.log(str); 
+//   }
+
+// }
+
+// rowCollaps(5);
+
+
+function pyramid(row){ 
+
+for(let i =0; i<=row; i++){ 
+let lines = ''; 
+  for(let j=0;j<row-i; j++){ 
+    lines += ' '; 
   }
+  for(let s=1; s<=(2*i)-1; s++ ){ 
+    (s === 1 ||  s === (2*i)-1  || i === row ) ? lines+= '*' : lines+=' ';  
+    
+  }
+  console.log(lines); 
+}
 
 }
 
-rowCollaps(5);
+pyramid(6);
+
+
