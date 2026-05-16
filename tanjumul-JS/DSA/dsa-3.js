@@ -116,20 +116,37 @@ backStar(5);
 
 
 
-function strBrow(row) { 
+// function strBrow(row) { 
 
-  for(let i=1; i<=row; i++){ 
-    let str = ''; 
-    for(let s =1; s<=row-i; s++){ 
-      str+= ' '; 
+//   for(let i=1; i<=row; i++){ 
+//     let str = ''; 
+//     for(let s =1; s<=row-i; s++){ 
+//       str+= ' '; 
+//     }
+//     for(let j = 1; j<=(2*i)-1; j++){ 
+//       str+='*'; 
+//     }
+//     console.log(str); 
+//   } 
+//   }
+// strBrow(5);
+
+
+function torBrow(row){ 
+
+  for(let i =0; i<=row; i++){ 
+    let lines = ''; 
+    for(let j = 0; j<=row-i; j++){
+      lines += ' ';
     }
-    for(let j = 1; j<=(2*i)-1; j++){ 
-      str+='*'; 
+    for(s=1; s<=(2*i)-1; s++){ 
+      lines+='*'; 
     }
-    console.log(str); 
-  } 
+    console.log(lines); 
   }
-strBrow(5);
 
+}
+
+torBrow(5);
 
 
