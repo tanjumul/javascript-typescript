@@ -671,3 +671,102 @@ function rowCollaps(row){
 
 rowCollaps(5);
 ```
+
+23. Solve this problem : 
+```javascript 
+     *
+    * *
+   *   *
+  *     *
+ *       *
+***********
+```
+## my kinda solve : 
+
+```javascript 
+   
+function pyramid(row){ 
+
+  for(let i =0; i<=row; i++){ 
+    let lines = ''; 
+      for(let j=0;j<row-i; j++){ 
+        lines += ' '; 
+      }
+      for(let s=1; s<=(2*i)-1; s++ ){ 
+        (s === 1 ||  s === (2*i)-1  || i === row ) ? lines+= '*' : lines+=' ';  
+        
+      }
+      console.log(lines); 
+  }
+
+}
+
+pyramid(6);
+```
+
+24. make an inverted pyramid : 
+```javascript 
+function hollow(row){ 
+  for(let i =row; i>=0; i--){ 
+    let str = ''; 
+    for(let s =1; s<=row-i; s++){ 
+      str +=' ';
+    }
+      for(let j =1; j<=(2*i)-1; j++){ 
+        11
+        str += '*';
+  
+      }  
+      console.log(str); 
+  }
+}
+
+hollow(5);
+``` 
+
+## output :
+
+```javascript 
+*********
+ *******
+  *****
+   ***
+    *
+```
+
+25.Make a inverted hollow : 
+
+```javascript 
+
+function hollow(row){ 
+  for(let i =row; i>=0; i--){ 
+    let str = ''; 
+    for(let s =1; s<=row-i; s++){ 
+      str +=' ';
+    }
+      for(let j =1; j<=(2*i)-1; j++){ 
+       
+        if(j == 1 || j == (2*i)-1 || i == row){ 
+           str += '*';
+        }else { 
+          str+=' '; 
+        }
+       
+  
+      }  
+      console.log(str); 
+  }
+}
+
+hollow(5);
+```
+
+## output:
+
+```javascript 
+*********
+ *     *
+  *   *
+   * *
+    *
+```
