@@ -30,3 +30,31 @@ const calTech =  ()=> {
   let username = 'Tanju'; 
   console.log(this); 
 }
+
+calTech(); 
+
+//example of the explecit return : 
+const addTwo = (num1,num2)=> {
+  return num1 + num2; 
+}
+console.log(addTwo(5,2)); 
+
+
+/**here i used the implicit  return  */
+const adTwo = (n1,n2)=> n1 + n2; 
+
+console.log(adTwo(5,2)); 
+
+const boguraMorich = (nu1, nu2)=> (nu1 + nu2); 
+console.log(boguraMorich(55,55)); 
+
+//for object return : 
+
+
+const addObj = (number1, number2) => ({ 
+  userName : 'Tanjumul',
+  address : 'poschim para' , 
+  vel :  number1+number2
+})
+console.log(addObj(10,22).vel); 
+
