@@ -21,3 +21,12 @@ function koffe(){
 }
 
 koffe(); 
+/** it only works in objects not in functins , see it's not working in this 
+ * function here ! okay ? tanju ! 
+ */
+
+
+const calTech =  ()=> { 
+  let username = 'Tanju'; 
+  console.log(this); 
+}
