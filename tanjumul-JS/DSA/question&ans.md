@@ -770,3 +770,93 @@ hollow(5);
    * *
     *
 ```
+26. input : 9 
+    output : <br>9 X 1 = 9
+<br> 9 X 2 = 18<br>  
+- bla bla bla .. 
+9 X 10 = 90
+
+```javascript 
+
+function printNum (num){ 
+
+  for(let i =1; i<=10; i++){ 
+
+    let str = 1; 
+    console.log(`${num} X ${i} = ${num*i}`);
+    str+=str; 
+  }
+
+}
+
+printNum(9);
+```
+
+
+27. Print the inputed number , also print all the number table till that inputed number 
+
+# output : 
+```javascript
+1 X 5 == 5
+2 X 5 == 10
+3 X 5 == 15
+4 X 5 == 20
+5 X 5 == 25
+
+
+Table of 1 is 1 X 1 = 1
+Table of 1 is 1 X 2 = 2
+Table of 1 is 1 X 3 = 3
+Table of 1 is 1 X 4 = 4
+Table of 1 is 1 X 5 = 5
+
+
+Table of 2 is 2 X 1 = 2
+Table of 2 is 2 X 2 = 4
+Table of 2 is 2 X 3 = 6
+Table of 2 is 2 X 4 = 8
+Table of 2 is 2 X 5 = 10
+
+
+Table of 3 is 3 X 1 = 3
+Table of 3 is 3 X 2 = 6
+Table of 3 is 3 X 3 = 9
+Table of 3 is 3 X 4 = 12
+Table of 3 is 3 X 5 = 15
+
+
+Table of 4 is 4 X 1 = 4
+Table of 4 is 4 X 2 = 8
+Table of 4 is 4 X 3 = 12
+Table of 4 is 4 X 4 = 16
+Table of 4 is 4 X 5 = 20
+
+
+Table of 5 is 5 X 1 = 5
+Table of 5 is 5 X 2 = 10
+Table of 5 is 5 X 3 = 15
+Table of 5 is 5 X 4 = 20
+Table of 5 is 5 X 5 = 25
+
+```
+
+```javascript
+ function tableTo(num){ 
+  
+    for (let i=1; i<=num;i++){
+      
+        console.log(`${i} X ${num} == ${i*num}`);
+       
+    }
+    console.log('\n'); 
+      for(let tak=1; tak<=num; tak++){ 
+        for( let j =1 ; j<=num; j++){ 
+          console.log(`Table of ${tak} is ${tak} X ${j} = ${tak * j}`); 
+        }
+            console.log('\n'); 
+      }
+  }
+
+  tableTo(5);
+
+```
