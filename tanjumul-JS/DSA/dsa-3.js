@@ -258,6 +258,7 @@ binaryPrint(5);
 
 */ 
 
+/*
 function hollow(row){ 
   for(let i =row; i>=0; i--){ 
     let str = ''; 
@@ -279,3 +280,22 @@ function hollow(row){
 }
 
 hollow(5);
+*/ 
+
+function butterFly(row){ 
+
+for(let i = row; i>=1; i--){ 
+  let str = ''; 
+    for(let j =0; j<=row-i; j++){ 
+        str += '*'
+    }
+    for(let k=0; k<(2*i)-1; k++){ 
+      str+= ' ';
+    }
+    console.log(str); 
+}
+
+
+}
+
+butterFly(5); 
