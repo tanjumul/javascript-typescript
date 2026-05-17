@@ -860,3 +860,45 @@ Table of 5 is 5 X 5 = 25
   tableTo(5);
 
 ```
+
+28. ## output : 
+```
+*
+**
+***
+****
+*****
+****
+***
+**
+*
+```
+
+## code : 
+``` javascript 
+
+
+  function upsideDown(num){ 
+    let str =''; 
+    let ttr = ''; 
+    for(let i =1; i<=num; i++){ 
+        str+='*'; 
+      console.log(str); 
+
+      }
+        for(let i =num -1; i>=1; i--){ 
+       let ttr =''; 
+          for(let k =1; k<=i; k++){ 
+            ttr+='*'; 
+          }
+            console.log(ttr); 
+
+      
+
+      }
+
+  }
+
+  upsideDown(5);
+
+```

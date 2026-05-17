@@ -314,20 +314,49 @@ hollow(5);
 
 // printNum(9);
 
-  function tableTo(num){ 
+  // function tableTo(num){ 
   
-    for (let i=1; i<=num;i++){
+  //   for (let i=1; i<=num;i++){
       
-        console.log(`${i} X ${num} == ${i*num}`);
+  //       console.log(`${i} X ${num} == ${i*num}`);
        
-    }
-    console.log('\n'); 
-      for(let tak=1; tak<=num; tak++){ 
-        for( let j =1 ; j<=num; j++){ 
-          console.log(`Table of ${tak} is ${tak} X ${j} = ${tak * j}`); 
-        }
-            console.log('\n'); 
+  //   }
+  //   console.log('\n'); 
+  //     for(let tak=1; tak<=num; tak++){ 
+  //       for( let j =1 ; j<=num; j++){ 
+  //         console.log(`Table of ${tak} is ${tak} X ${j} = ${tak * j}`); 
+  //       }
+  //           console.log('\n'); 
+  //     }
+  // }
+
+  // tableTo(5);
+
+/*
+  function upsideDown(num){ 
+    let str =''; 
+    let ttr = ''; 
+    for(let i =1; i<=num; i++){ 
+        str+='*'; 
+      console.log(str); 
+
       }
+        for(let i =num -1; i>=1; i--){ 
+       let ttr =''; 
+          for(let k =1; k<=i; k++){ 
+            ttr+='*'; 
+          }
+            console.log(ttr); 
+
+      
+
+      }
+
   }
 
-  tableTo(5);
+  upsideDown(5);
+  */ 
+
+
+
+  
