@@ -21,4 +21,15 @@ if(temperature < 41 ){
   console.log('Grater than 41'); 
 }
 
+const userLoggedIn = true; 
+const debitCard = true; 
+const loggedInFromGoogle = true; 
+const loggedInFromEmail = false; 
 
+if(userLoggedIn && debitCard ){
+
+  console.log('Allow him to buy !'); 
+} 
+ if(loggedInFromEmail || loggedInFromGoogle){ 
+  console.log('User Logged in'); 
+}
