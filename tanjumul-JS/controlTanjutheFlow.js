@@ -33,3 +33,43 @@ if(userLoggedIn && debitCard ){
  if(loggedInFromEmail || loggedInFromGoogle){ 
   console.log('User Logged in'); 
 }
+
+const isEmail = [];
+if(isEmail.length === 0){ 
+  console.log('The user email is empty');
+}else{ 
+  console.log('User has a email');
+}
+
+const emails = { 
+
+}
+
+if(Object.keys(emails).length === 0){
+  console.log('Object is Empty ');
+}else {
+  console.log('Object has numbers'); 
+}
+
+/** truthy valus : 
+ * 'false' 
+ * ' ' 
+ * " "
+ * "0" 
+ * []
+ * function(){}
+ * {}
+ */
+
+/** Falsy values
+ * null
+ * 0 
+ * false 
+ * ""
+ * ''
+ *  -0 
+ * BigInt 0n 
+ * undefined 
+ * NaN
+ */
+
