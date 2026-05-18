@@ -903,7 +903,7 @@ Table of 5 is 5 X 5 = 25
 
 ```
 
-## output : 
+29. ## output : 
 ```
 *
 **
@@ -982,3 +982,50 @@ let sstr ='';
 
   sandTime(5); 
   ```
+
+  30. ## the output should be : 
+  ```javascript 
+
+          *            
+         ***
+        *****
+       *******
+      *********
+      *********
+       *******
+        *****
+         ***
+          *
+
+   ```
+
+# - Code : 
+```javascript 
+   
+function pyraMix(num){ 
+
+    for(let i =0; i<=num; i++){ 
+      let str = ''; 
+        for(let j=0; j<=num-i; j++){ 
+            str+=' '; 
+        }
+          for(let s =1; s<= (2*i)-1; s++){ 
+            str+='*'; 
+          }
+          console.log(str); 
+    }
+
+    for(let i =num; i>=1; i--){ 
+      let str = ''; 
+        for(let j=0; j<=num-i; j++){ 
+            str+=' '; 
+        }
+          for(let s =1; s<= (2*i)-1; s++){ 
+            str+='*'; 
+          }
+          console.log(str); 
+    }
+
+}
+pyraMix(5); 
+```
