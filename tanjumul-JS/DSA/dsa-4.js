@@ -65,12 +65,58 @@ console.log(num2);
 
 /** now to do a array like reversing it through mathmatically  */
 
-function printNumbers(num){ 
-let newNum =0; 
-num.forEach((digit, index)=>{ 
-newNum += digit * Math.pow(10, index); 
-});
-console.log(newNum); 
+// function printNumbers(num){ 
+// let newNum =0; 
+// num.forEach((digit, index)=>{ 
+// newNum += digit * Math.pow(10, index); 
+// });
+// console.log(newNum); 
+// }
+
+// printNumbers([2,3,4,6]); 
+
+
+
+/**find the sum of digits : 
+ * input N = 987
+ * output : 24; 
+ */
+
+// function FindQuest(num){ 
+// let sum = 0; 
+// let nn = num; 
+   
+//   while(nn>0){ 
+//     sum+= Math.floor(nn%10); 
+//     nn = Math.floor(nn/10); 
+//   } return sum; 
+
+//     }  
+
+// console.log(FindQuest(225)); 
+
+/*
+Find the Average of Digits
+
+Input: N = 4567
+Output: Average = 5.5
+✨ Combines digit sum and count for average computation.
+
+*/
+
+function numNum(num){ 
+let counter = 0; 
+let n=num;
+let sum = 0;
+
+while (n>0){ 
+sum+= Math.floor(n%10);
+n = Math.floor(n/10); 
+counter++; 
+}
+let avg = sum / counter; 
+return avg; 
+
 }
 
-printNumbers([2,3,4,6]); 
+console.log(numNum(4567)); 
