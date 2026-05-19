@@ -179,21 +179,76 @@ console.log(smallBig(9482)); */
 
 
 
-const n = 112233;
+// const n = 112233;
 
-function countFrequency(n) {
-  const frequency = {};
-  while (n !== 0) {
-    let lastDigit = Math.floor(n % 10);
-    if (!frequency[lastDigit]) {
-      frequency[lastDigit] = 1;
-    } else {
-      frequency[lastDigit] = frequency[lastDigit] + 1;
-    }
-    n = Math.floor(n / 10);
+// function countFrequency(n) {
+//   const frequency = {};
+//   while (n !== 0) {
+//     let lastDigit = Math.floor(n % 10);
+//     if (!frequency[lastDigit]) {
+//       frequency[lastDigit] = 1;
+//     } else {
+//       frequency[lastDigit] = frequency[lastDigit] + 1;
+//     }
+//     n = Math.floor(n / 10);
+//   }
+
+//   return frequency;
+// }
+
+// console.log(countFrequency(n));
+
+/*
+function countFrequency(num){ 
+let count = 0; 
+let n = num; 
+let obj = {};
+while(n>0){ 
+  
+  let seal = Math.floor(n%10);
+  if(!obj[seal]){ 
+    obj[seal] = 0; 
+    obj[seal]++;
   }
+  else { 
+    obj[seal]+=1;
+  }
+  n = Math.floor(n/10); 
+}
+return obj; 
 
-  return frequency;
 }
 
-console.log(countFrequency(n));
+console.log(countFrequency(111222222222233));
+
+*/ 
+
+
+
+// Input: N = 112233
+// Output: 1 → 2, 2 → 2, 3 → 2
+
+function playObj(num){ 
+
+  let count =0; 
+  let obj ={}; 
+
+  let nn = num; 
+
+  while(nn>0){
+  let n = Math.floor(nn%10); 
+    if(!obj[n]){ 
+      obj[n]=1; 
+      // obj[n]++; 
+    }else{
+      obj[n]+=1; 
+    }
+
+    nn=Math.floor(nn/10); 
+  }
+    return obj ; 
+
+}
+
+
+console.log(playObj(1112222443533)); 
