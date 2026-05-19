@@ -104,6 +104,7 @@ Output: Average = 5.5
 
 */
 
+/*
 function numNum(num){ 
 let counter = 0; 
 let n=num;
@@ -120,3 +121,58 @@ return avg;
 }
 
 console.log(numNum(4567)); 
+*/ 
+
+
+/**Find the Largest and Smallest Digit in a Number
+
+ Input: N = 9483
+Output: Largest = 9, Smallest = 3
+
+ */
+
+function smallBig(num){
+let arr = []; 
+let n = num; 
+sum=0; 
+m = arr.length;
+
+while(n>0){ 
+  let digit = Math.floor(n%10); 
+  arr.push(digit); 
+  n = Math.floor(n/10); 
+}
+for (let k =0; k<=arr.length; k++){ 
+  console.log(arr[k]); 
+}
+
+let high = arr[0]; 
+let low = arr[0]; 
+
+
+for(let i =0; i<=arr.length; i++){
+  for(let j =0; j<=m; j++){
+    if(arr[i]> arr[j]){
+      high =arr[i]
+    }else {
+    low =arr[j];
+    }
+  }
+}
+console.log(`Highest : ${high} and lowest  : ${low}`);
+
+// for(let i =0; i<=arr.length;i++){ 
+//   for(let j =0; j<=i; j++){ 
+//     if(arr[i]>arr[j]){ 
+//       console.log(`The biggest is : ${arr[i]}`);
+//     } else { 
+//         console.log(`The lowest are : ${arr[j]}`);
+//     }
+//   }
+// }
+
+
+}
+
+
+console.log(smallBig(9482));
