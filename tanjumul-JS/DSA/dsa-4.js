@@ -130,7 +130,7 @@ console.log(numNum(4567));
 Output: Largest = 9, Smallest = 3
 
  */
-
+/*
 function smallBig(num){
 let arr = []; 
 let n = num; 
@@ -175,4 +175,25 @@ console.log(`Highest : ${high} and lowest  : ${low}`);
 }
 
 
-console.log(smallBig(9482));
+console.log(smallBig(9482)); */
+
+
+
+const n = 112233;
+
+function countFrequency(n) {
+  const frequency = {};
+  while (n !== 0) {
+    let lastDigit = Math.floor(n % 10);
+    if (!frequency[lastDigit]) {
+      frequency[lastDigit] = 1;
+    } else {
+      frequency[lastDigit] = frequency[lastDigit] + 1;
+    }
+    n = Math.floor(n / 10);
+  }
+
+  return frequency;
+}
+
+console.log(countFrequency(n));
