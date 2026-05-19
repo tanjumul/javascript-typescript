@@ -49,15 +49,28 @@ console.log(num2);
 
 // arrNew = [6,5,4,2]
 
-function newArr(num){ 
+// function newArr(num){ 
 
-   let oneArr = []; 
+//    let oneArr = []; 
 
-    for(let i = num.length-1; i>=0;  i--)
-{ 
-  oneArr.push(num[i]); 
+//     for(let i = num.length-1; i>=0;  i--)
+// { 
+//   oneArr.push(num[i]); 
+// }
+// return oneArr; 
+// }
+
+// console.log(newArr([6,5,3,7]));
+
+
+/** now to do a array like reversing it through mathmatically  */
+
+function printNumbers(num){ 
+let newNum =0; 
+num.forEach((digit, index)=>{ 
+newNum += digit * Math.pow(10, index); 
+});
+console.log(newNum); 
 }
-return oneArr; 
-}
 
-console.log(newArr([6,5,3,7]));
+printNumbers([2,3,4,6]); 
