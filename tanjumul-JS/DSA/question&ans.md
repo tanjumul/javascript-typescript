@@ -1029,3 +1029,37 @@ function pyraMix(num){
 }
 pyraMix(5); 
 ```
+
+## DSA-4 questions are missing; start from here 
+
+## 31. Question : 
+-   Input: N = 112233
+-  Output: 1 → 2, 2 → 2, 3 → 2
+
+## optimised code : 
+```javascript 
+function playObj(num){ 
+
+  let count =0; 
+  let obj ={}; 
+
+  let nn = num; 
+
+  while(nn>0){
+  let n = Math.floor(nn%10); 
+    if(!obj[n]){ 
+      obj[n]=1; 
+      
+    }else{
+     obj[n]++; 
+    }
+
+    nn=Math.floor(nn/10); 
+  }
+    return obj ; 
+
+}
+
+
+console.log(playObj(1112222443533)); 
+```

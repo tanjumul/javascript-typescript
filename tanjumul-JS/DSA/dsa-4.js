@@ -239,9 +239,9 @@ function playObj(num){
   let n = Math.floor(nn%10); 
     if(!obj[n]){ 
       obj[n]=1; 
-      // obj[n]++; 
+      
     }else{
-      obj[n]+=1; 
+     obj[n]++; 
     }
 
     nn=Math.floor(nn/10); 
