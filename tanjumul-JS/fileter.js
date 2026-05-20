@@ -90,17 +90,32 @@ const books = [
     inStock: false
   }
 ];
-
-let newBooks = books.filter((book)=> {
-  if(book.rating >= 4.5){ 
-    return book; 
-  }
+let nvewBooks = books.filter((book)=> {
+  return book.pages >= 700; 
  } 
  ); 
 
- console.log( newBooks); 
+ console.log(nvewBooks); 
+
+ //if i want to see only pages then i will use map (): 
+
+ let seePages = books.map((book)=>{ 
+  return book.pages; 
+ })
+ console.log(seePages); 
+
+// let newBooks = books.filter((book)=> {
+//   if(book.rating >= 4.5){ 
+//     return book; 
+//   }
+//  } 
+//  ); 
+
+//  console.log( newBooks); 
+
+
  
- newBooks = books.filter((book)=>{
+ let newBooks = books.filter((book)=>{
   if(book.genre === 'Fantasy' && book.inStock === true){ 
     return book; 
   }
@@ -143,3 +158,35 @@ next i use the filter to use it's true of false thing , and got these values :
 [ 541, 751, 41 ] 
 */
 console.log(noNewNums);
+
+console.log('\n'); 
+const mynums = [1,2,3]; 
+
+// const myTotal = mynums.reduce(function (acc, currval){
+//   console.log(`acc : ${acc} , current value : ${currval}`); 
+//   return acc + currval; 
+// },0)
+
+const myTotal = mynums.reduce((acc,curr)=>acc+curr,0); 
+console.log(myTotal); 
+
+
+const shoppingCart = [ 
+  {
+    itemName : 'JavaScript Course', 
+    price : 5999
+  },
+  {
+    itemName : 'Python Course', 
+    price : 2999
+  },
+  {
+    itemName : 'Machine Learning Course', 
+    price : 6999
+  },
+]
+const CartPrice = shoppingCart.reduce((acc , val)=>{
+  return acc + val.price;
+ },0)
+
+ console.log(CartPrice); 
