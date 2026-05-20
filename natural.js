@@ -74,9 +74,13 @@ for(const i of greetings){
 map.set('BN', 'Bangladesh'); 
 map.set('DE','Germany'); 
 map.set('NP','Nepal'); 
+console.log('Working ? ')
+// for(const key in map){ 
+//   console.log(key); 
+// }
 
 for(const [key,value] of map){ 
-  console.log(key , '-:-' , value); 
+ console.log(key , '-:-' , value); 
 }
 
 const myObj = { 
@@ -95,7 +99,37 @@ for( key in programming_lang){
   console.log(key ,'=', programming_lang[key]); 
 }
 /**in array By default it starts with 0 , but in the Object it start with anyting that you can enter  */
+console.log('starting forEach ! '); 
 
-programming_lang.forEach((index , value )=>{ 
-console.log('key' + '=' + value , 'value = ' + index)
+programming_lang.forEach((value , index )=>{ 
+console.log(value +':'+index); 
+})
+
+
+const country = ['Deutschland', 'Bangladesh', 'France', 'Australia', 'Japan','United States of America','China','Italy','Norway','Thialand']; 
+
+country.forEach((value, index , arr)=>{
+  // console.log(value, index,arr); 
+})
+
+
+//very common on fetching data from database : 
+const database = [
+{
+  languageName : 'JavaScript',
+  languageDot : '.js'
+} ,
+{
+  languageName : 'C++',
+  languageDot : '.cpp'
+} ,
+{
+  languageName : 'Python',
+  languageDot : '.py'
+} 
+
+]
+
+database.forEach((items , index, arr)=>{
+  console.log(items.languageDot); 
 })
