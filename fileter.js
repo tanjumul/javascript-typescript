@@ -91,7 +91,7 @@ const books = [
   }
 ];
 
-const newBooks = books.filter((book)=> {
+let newBooks = books.filter((book)=> {
   if(book.rating >= 4.5){ 
     return book; 
   }
@@ -99,3 +99,10 @@ const newBooks = books.filter((book)=> {
  ); 
 
  console.log( newBooks); 
+ 
+ newBooks = books.filter((book)=>{
+  if(book.genre === 'Fantasy' && book.inStock === true){ 
+    return book; 
+  }
+ }); 
+ console.log(newBooks); 
