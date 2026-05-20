@@ -144,4 +144,34 @@ next i use the filter to use it's true of false thing , and got these values :
 */
 console.log(noNewNums);
 
+console.log('\n'); 
+const mynums = [1,2,3]; 
 
+// const myTotal = mynums.reduce(function (acc, currval){
+//   console.log(`acc : ${acc} , current value : ${currval}`); 
+//   return acc + currval; 
+// },0)
+
+const myTotal = mynums.reduce((acc,curr)=>acc+curr,0); 
+console.log(myTotal); 
+
+
+const shoppingCart = [ 
+  {
+    itemName : 'JavaScript Course', 
+    price : 5999
+  },
+  {
+    itemName : 'Python Course', 
+    price : 2999
+  },
+  {
+    itemName : 'Machine Learning Course', 
+    price : 6999
+  },
+]
+const CartPrice = shoppingCart.reduce((acc , val)=>{
+  return acc + val.price
+ },0)
+
+ console.log(CartPrice); 
