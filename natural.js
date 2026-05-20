@@ -132,4 +132,28 @@ const database = [
 
 database.forEach((items , index, arr)=>{
   console.log(items.languageDot); 
+  // console.log(items.languageName); 
 })
+
+
+/* filter map and reduce  */
+//use forEach it never returns anything , but using filter will help you returning the value too ! 
+//if you are using a scope it turns into object then in filter you must use the return keyword to get the value !
+const myName = [1,3,4,5,4,2,6,4,8,6,5,3];
+
+const NewNum = myName.filter((nums)=> { 
+  return nums>=4; 
+} ); 
+
+console.log(NewNum)
+
+// i can use this way also 
+
+const ano_arr = []; 
+const newVarient = myName.forEach((pnum)=>{ 
+if(pnum>=1){ 
+  ano_arr.push(pnum); 
+}
+})
+console.log(ano_arr);
+
