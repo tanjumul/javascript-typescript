@@ -49,3 +49,20 @@ console.log(myArray[index]);
 
   index++; 
 }
+/**High order array loops */
+
+const arr = [1,2,3,4,5,6];
+
+for(const num of arr){
+  console.log(num); 
+}
+
+const greetings = 'Hello World'; 
+  let count = 0; 
+for(const i of greetings){ 
+
+  console.log(i);
+  count++;
+ 
+}
+  console.log(` the count of words are : ${count}`); 
