@@ -37,3 +37,15 @@ function natural_num_fast(num){
   return num*(num+1)/2; //this is the formula  , you should've known this, okay ! 
 }
 console.log(natural_num_fast(5)); 
+
+
+let myArray = ['flash', 'batman', 'myfav: superman']; 
+let index =0; 
+
+while(index<myArray.length){ 
+
+console.log(myArray[index]); 
+
+
+  index++; 
+}

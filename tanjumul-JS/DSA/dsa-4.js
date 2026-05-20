@@ -227,7 +227,7 @@ console.log(countFrequency(111222222222233));
 
 // Input: N = 112233
 // Output: 1 → 2, 2 → 2, 3 → 2
-
+/*
 function playObj(num){ 
 
   let count =0; 
@@ -252,3 +252,26 @@ function playObj(num){
 
 
 console.log(playObj(1112222443533)); 
+*/ 
+
+// const work = { 
+//   IELTS : 'Listening', 
+//   JS : 'Hitesh', 
+//   FrontEnd : 'FreeCodeCamp'
+// }
+
+// console.log(work); 
+
+const work = { 
+  IELTS : 'Listening', 
+  JS : 'Hitesh', 
+  FrontEnd : 'FreeCodeCamp'
+}
+
+const numberedWork = new Map();
+Object.entries(work).forEach(([key, value], index) => {
+  numberedWork.set(`${index + 1}. ${key}`, value );
+});
+
+console.log(Object.fromEntries(numberedWork));
+
