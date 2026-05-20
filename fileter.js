@@ -105,4 +105,41 @@ let newBooks = books.filter((book)=> {
     return book; 
   }
  }); 
- console.log(newBooks); 
+//  console.log(newBooks); 
+
+
+ const myNumbers = [1,3,4,3,2,5,6,4,8,9,5,3]; 
+
+ myNumbers.map((value , index )=>{
+  myNumbers[index]+=10;  
+ })
+//  console.log(myNumbers); 
+
+let myNewNums = [1,3,54,3,2,1,75,4]
+const noNewNums = myNewNums.map((e)=> {
+  return e*10
+}).map((e)=>e+1).filter((e)=> e>=35);
+
+
+
+/**  map returns automatically but here i used scope that's why it's not returning automatically , i have to put return externally. */ 
+
+/* with the use of first .map : [
+  10, 30, 540, 30,
+  20, 10, 750, 40
+]
+with the use of second .map : 
+[
+  11, 31, 541, 31,
+  21, 11, 751, 41
+]
+
+with the use of .filter : 
+[ 541, 751, 41 ]
+N.B: so the first e is passing to the next .map() okey , keep it mine if the main array[1] = 1 , then if i do the 
+multiplication with 10 then it becomes 10 , then if i again use a nee .map(e)=> e+1 it will now add to the previous 
+element like 10+1 = 11
+next i use the filter to use it's true of false thing , and got these values : 
+[ 541, 751, 41 ] 
+*/
+console.log(noNewNums);
