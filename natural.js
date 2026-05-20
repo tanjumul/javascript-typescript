@@ -95,3 +95,7 @@ for( key in programming_lang){
   console.log(key ,'=', programming_lang[key]); 
 }
 /**in array By default it starts with 0 , but in the Object it start with anyting that you can enter  */
+
+programming_lang.forEach((index , value )=>{ 
+console.log('key' + '=' + value , 'value = ' + index)
+})
