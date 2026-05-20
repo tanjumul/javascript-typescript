@@ -147,3 +147,13 @@ const NewNum = myName.filter((nums)=> {
 
 console.log(NewNum)
 
+// i can use this way also 
+
+const ano_arr = []; 
+const newVarient = myName.forEach((pnum)=>{ 
+if(pnum>=1){ 
+  ano_arr.push(pnum); 
+}
+})
+console.log(ano_arr);
+
