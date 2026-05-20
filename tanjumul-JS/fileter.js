@@ -90,17 +90,32 @@ const books = [
     inStock: false
   }
 ];
-
-let newBooks = books.filter((book)=> {
-  if(book.rating >= 4.5){ 
-    return book; 
-  }
+let nvewBooks = books.filter((book)=> {
+  return book.pages >= 700; 
  } 
  ); 
 
- console.log( newBooks); 
+ console.log(nvewBooks); 
+
+ //if i want to see only pages then i will use map (): 
+
+ let seePages = books.map((book)=>{ 
+  return book.pages; 
+ })
+ console.log(seePages); 
+
+// let newBooks = books.filter((book)=> {
+//   if(book.rating >= 4.5){ 
+//     return book; 
+//   }
+//  } 
+//  ); 
+
+//  console.log( newBooks); 
+
+
  
- newBooks = books.filter((book)=>{
+ let newBooks = books.filter((book)=>{
   if(book.genre === 'Fantasy' && book.inStock === true){ 
     return book; 
   }
@@ -171,7 +186,7 @@ const shoppingCart = [
   },
 ]
 const CartPrice = shoppingCart.reduce((acc , val)=>{
-  return acc + val.price
+  return acc + val.price;
  },0)
 
  console.log(CartPrice); 
