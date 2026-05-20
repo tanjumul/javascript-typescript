@@ -143,3 +143,5 @@ next i use the filter to use it's true of false thing , and got these values :
 [ 541, 751, 41 ] 
 */
 console.log(noNewNums);
+
+
