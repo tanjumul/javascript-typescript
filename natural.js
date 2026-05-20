@@ -66,3 +66,21 @@ for(const i of greetings){
  
 }
   console.log(` the count of words are : ${count}`); 
+
+
+  //map 
+
+  const map = new Map(); 
+map.set('BN', 'Bangladesh'); 
+map.set('DE','Germany'); 
+map.set('NP','Nepal'); 
+
+for(const [key,value] of map){ 
+  console.log(key , '-:-' , value); 
+}
+
+const myObj = { 
+  'game1': 'Rainbow 6 Siege', 
+  'game2': 'Counter Strike 2', 
+  'game3': 'Overwatch'
+} 
