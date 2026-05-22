@@ -87,7 +87,7 @@ const books = [
     releaseDate: "1932-08-30",
     pages: 268,
     rating: 4.6,
-    inStock: false
+    inStock: true
   }
 ];
 let nvewBooks = books.filter((book)=> {
