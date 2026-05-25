@@ -6,7 +6,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kaffee mit Tanju</title>
 <style>
-  
+  @keyframes warLock {
+    0%{
+      transform:translateX(0); 
+    }
+    50%{
+      transform:translateX(50px); 
+    }
+    75%{
+      transform:translateX(20px); 
+    }
+    100%{ 
+      transform:translateX(10px); 
+    }
+  }
+  .namedisplay{
+    animation-name:warLock; 
+    animation-duration:5s;
+    animation-iteration-count:infinite; 
+  }
  
   @keyframes moveAround {
     0% {
@@ -14,18 +32,16 @@
     }
     50% {
       transform: translateX(500px);
-      color: yellow;
+      color: balck;
     }
     100% {
       transform: translateX(0);
-      color: red; 
+     
     }
   }
-  
-  
   .nameDisplay {
     animation-name: moveAround;  
-    animation-duration: 20.043s;  
+    animation-duration: 5s;  
     animation-iteration-count: infinite;  
   }
 </style>
