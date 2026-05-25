@@ -1,12 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head> 
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kaffee mit Tanju</title>
+<style>
+  
+ 
+  @keyframes moveAround {
+    0% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(500px);
+      color: yellow;
+    }
+    100% {
+      transform: translateX(0);
+      color: red; 
+    }
+  }
+  
+  
+  .nameDisplay {
+    animation-name: moveAround;  
+    animation-duration: 20.043s;  
+    animation-iteration-count: infinite;  
+  }
+</style>
 </head>
 <body style="background-color:#212121;  color:#fff">
    
+<h1 class="nameDisplay" style="animation-duration:20.043"; >Tanjumul ALOM</h1>
 </body>
 <script>
     const div = document.createElement('div');
