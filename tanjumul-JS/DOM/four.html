@@ -36,6 +36,15 @@
           }
           addAnotherTry('Lua');
 
+          function createAnother (number){ 
+          
+                const lil = document.createElement('li'); 
+                lil.appendChild(document.createTextNode(number)); 
+                document.querySelector('.language').appendChild(lil); 
+          
+          }
+          createAnother("Java")
+
     </script>
   </body>
 </html>
