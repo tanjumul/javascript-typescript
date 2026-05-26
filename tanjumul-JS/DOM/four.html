@@ -5,7 +5,7 @@
   </head>
   <body style="background-color:#0f0f0f; color:white; ">
    <ul class="language">
-    <li>Javascript</li>
+    <li>JavaScript</li>
    </ul>
     <script>
           function addNew(list){ 
@@ -27,7 +27,14 @@
 
           addOptiLanguage('Rubi');
 
+          function addAnotherTry(programName){ 
           
+            const value = document.createElement('li'); 
+            value.appendChild(document.createTextNode(programName)); 
+            document.querySelector('.language').appendChild(value); 
+            
+          }
+          addAnotherTry('Lua');
 
     </script>
   </body>
