@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Koffee mit Tanjumul</title>
+  </head>
+  <body style="background-color:#0f0f0f; color:white; ">
+   <ul class="language">
+    <li>Javascript</li>
+   </ul>
+    <script>
+          function addNew(list){ 
+            const li = document.createElement('li'); 
+            li.innerHTML = `${list}`;
+            document.querySelector('.language').appendChild(li); 
+                  
+          }
+     
+          addNew("TypeScript"); 
+          addNew('Python'); 
+
+
+          function addOptiLanguage(langName){ 
+            const li = document.createElement('li'); 
+            li.appendChild(document.createTextNode(langName)); 
+              document.querySelector('.language').appendChild(li); 
+          }
+
+          addOptiLanguage('Rubi');
+
+          
+
+    </script>
+  </body>
+</html>
