@@ -44,7 +44,17 @@
           
           }
           createAnother("Java")
+//Edit 
+          const second_lang = document.querySelector("li:nth-child(2)"); 
+          second_lang.innerHTML = "mojo";
+          document.createElement('li'); 
+//edit : 
+const firstLang = document.querySelector('li:first-child');
+firstLang.outerHTML = "<li>MojoJoJo</li>"
 
+//remove : 
+const  lastLang = document.querySelector('li:last-child'); 
+lastLang.remove(); //removes the Java; 
     </script>
   </body>
 </html>
