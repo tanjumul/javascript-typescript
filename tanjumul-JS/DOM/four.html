@@ -55,6 +55,17 @@ firstLang.outerHTML = "<li>MojoJoJo</li>"
 //remove : 
 const  lastLang = document.querySelector('li:last-child'); 
 lastLang.remove(); //removes the Java; 
+
+function newLang(lew){ 
+
+  const barcola = document.createElement("li"); 
+  barcola.appendChild(document.createTextNode(lew)); 
+  document.querySelector('.language').appendChild(barcola); 
+
+}
+newLang('Golang'); 
+
+
     </script>
   </body>
-</html>
+</html> 
