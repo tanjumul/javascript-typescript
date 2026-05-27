@@ -5,7 +5,7 @@
   </head>
   <body style="background-color:#0f0f0f; color:white; ">
    <ul class="language">
-    <li>Javascript</li>
+    <li>JavaScript</li>
    </ul>
     <script>
           function addNew(list){ 
@@ -27,8 +27,45 @@
 
           addOptiLanguage('Rubi');
 
+          function addAnotherTry(programName){ 
           
+            const value = document.createElement('li'); 
+            value.appendChild(document.createTextNode(programName)); 
+            document.querySelector('.language').appendChild(value); 
+            
+          }
+          addAnotherTry('Lua');
+
+          function createAnother (number){ 
+          
+                const lil = document.createElement('li'); 
+                lil.appendChild(document.createTextNode(number)); 
+                document.querySelector('.language').appendChild(lil); 
+          
+          }
+          createAnother("Java")
+//Edit 
+          const second_lang = document.querySelector("li:nth-child(2)"); 
+          second_lang.innerHTML = "mojo";
+          document.createElement('li'); 
+//edit : 
+const firstLang = document.querySelector('li:first-child');
+firstLang.outerHTML = "<li>MojoJoJo</li>"
+
+//remove : 
+const  lastLang = document.querySelector('li:last-child'); 
+lastLang.remove(); //removes the Java; 
+
+function newLang(lew){ 
+
+  const barcola = document.createElement("li"); 
+  barcola.appendChild(document.createTextNode(lew)); 
+  document.querySelector('.language').appendChild(barcola); 
+
+}
+newLang('Golang'); 
+
 
     </script>
   </body>
-</html>
+</html> 

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width='device-width', initial-scale=1.0">
+  <title>creating elements</title>
+</head>
+<body style="background-color:#212121; color: white;">
+
+  <ul class="language">
+    <li>Bangla</li>
+  </ul>
+
+
+  <script>
+    function cherki(n){ 
+      const very = document.createElement('li'); 
+      very.appendChild(document.createTextNode(n)); 
+      document.querySelector('.language').appendChild(very); 
+      
+    }
+    cherki('Deutsch');
+  </script>
+</body>
+</html>
