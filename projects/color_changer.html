@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>JavaScript Background Color Switcher</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: 'Courier New', Courier, monospace sans-serif;
+        transition: background-color 0.3s ease;
+      }
+
+      nav {
+        text-align: center;
+        margin: 20px 0;
+        padding: 10px;
+      }
+
+      nav a {
+        margin: 0 10px;
+        text-decoration: none;
+        color: #111111;
+        font-size: 18px;
+        padding: 8px 16px;
+        border-radius: 4px;
+        transition: background-color 0.3s;
+      }
+
+      nav a:hover {
+        background-color: #db0a0a;
+      }
+
+      .canvas {
+        text-align: center;
+        margin: 50px auto;
+        width: 80%;
+        max-width: 800px;
+        padding-bottom:3000px; 
+      }
+
+      .canvas a {
+        display: inline-block;
+        margin-bottom: 30px;
+      }
+
+      h1 {
+        margin: 20px 0;
+        color: #212121;
+        font-size: 2.5rem;
+      }
+
+      h2 {
+        margin: 30px 0 20px;
+        color: #212121;
+        font-size: 1.2rem;
+        font-weight: normal;
+      }
+
+      h2 span {
+        display: block;
+        margin-top: 10px;
+        font-size: 1rem;
+        color: #666;
+      }
+
+      .button {
+        display: inline-block;
+        width: 100px;
+        height: 100px;
+        margin: 10px;
+        cursor: pointer;
+        border: 2px solid #212121;
+        border-radius: 8px;
+        transition: transform 0.2s, box-shadow 0.2s;
+      }
+
+      .button:hover {
+        transform: scale(1.05);
+        box-shadow: 0 4px 8px rgba(208, 67, 67, 0.2);
+      }
+
+      #grey {
+        background-color: grey;
+      }
+
+      #white {
+        background-color: white;
+      }
+
+      #blue {
+        background-color: blue;
+      }
+
+      #yellow {
+        background-color: yellow;
+      }
+
+      @media (max-width: 600px) {
+        .button {
+          width: 70px;
+          height: 70px;
+          margin: 8px;
+        }
+        
+        h1 {
+          font-size: 1.8rem;
+        }
+        
+        .canvas {
+          width: 95%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <a href="/" aria-current="page">Home</a>
+      <a target="_blank" href="https://www.youtube.com/@chaiaurcode"
+        >Youtube channel</a
+      >
+    </nav>
+    <div class="canvas">
+      <a
+        style="
+          background-color: #fff;
+          padding: 10px 30px;
+          border-radius: 8px;
+          color:  #212121;
+          text-decoration: none;
+          border: 1px solid #212121;
+          display: inline-block;
+          transition: background-color 0.3s;
+        "
+        href="../index.html"
+        onmouseover="this.style.backgroundColor='#f0f0f0'"
+        onmouseout="this.style.backgroundColor='#fff'"
+        >Back to Home Page</a
+      >
+      <h1>Color Scheme Switcher</h1>
+      <span class="button" id="grey"></span>
+      <span class="button" id="white"></span>
+      <span class="button" id="blue"></span>
+      <span class="button" id="yellow"></span>
+      <h2>
+        Try clicking on one of the colors above
+        <span>to change the background color of this page!</span>
+      </h2>
+    </div>
+
+    <script>
+
+
+
+
+
+
+
+      // const buttons = document.querySelectorAll('.button');
+      // const body = document.querySelector('body');
+
+      // buttons.forEach(function(button) {
+      //   button.addEventListener('click', function(e) {
+      //     const color = e.target.id;
+          
+      //     switch(color) {
+      //       case 'grey':
+      //         body.style.backgroundColor = 'grey';
+      //         break;
+      //       case 'white':
+      //         body.style.backgroundColor = 'white';
+      //         break;
+      //       case 'blue':
+      //         body.style.backgroundColor = 'blue';
+      //         break;
+      //       case 'yellow':
+      //         body.style.backgroundColor = 'yellow';
+      //         break;
+      //       default:
+      //         body.style.backgroundColor = 'white';
+      //     }
+      //   });
+      // });
+    </script>
+  </body>
+</html>
