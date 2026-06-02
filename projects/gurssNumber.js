@@ -54,9 +54,9 @@ if(guess === randomNumber){
 
 function displayGuess (guess){
 userInput.value = ''; 
-guessSlot.innerHTML += `<span>${guess} ,</span>`
-numGuess++; 
-remaining.innerHTML = `${10-numGuess}`;
+guessSlot.innerHTML += `<span>${guess} ,</span>` 
+remaining.innerHTML = `${11-numGuess}`;
+numGuess++;
 }
 
 function displayMessage(message){ 
