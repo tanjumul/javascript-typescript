@@ -54,13 +54,13 @@ if(guess === randomNumber){
 
 function displayGuess (guess){
 userInput.value = ''; 
-guesses.innerHTML += `<span>${guess}</span>`
+guessSlot.innerHTML += `<span>${guess} ,</span>`
 numGuess++; 
 remaining.innerHTML = `${10-numGuess}`;
 }
 
 function displayMessage(message){ 
-
+lowOrHigh.innerHTML = `<h2>${message}</h2>`;
 }
 
 function endGame (){ 
