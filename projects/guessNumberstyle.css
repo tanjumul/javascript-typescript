@@ -13,7 +13,7 @@ body {
   min-height: 100vh;
   margin: 0;
   padding: 20px;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(-45deg, #667eeac4 40%, #764ba2 50%);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -42,7 +42,7 @@ nav a {
 
 nav a:hover {
   background: rgba(255, 255, 255, 0.4);
-  transform: translateY(-2px);
+  transform: translateY(-20px);
 }
 
 #wrapper {
@@ -57,7 +57,7 @@ nav a:hover {
   border-radius: 20px;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.2);
-  transition: transform 0.3s ease;
+  transition: transform 0.4s ease-out;
 }
 
 #wrapper:hover {
@@ -184,6 +184,9 @@ h1 {
   background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
   color: white;
   padding-top:20px; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .lowOrHi {
