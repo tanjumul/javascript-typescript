@@ -10,15 +10,28 @@
    <button id="start">Start</button>
     <button id="stop">Stop</button>
   <script>
+    let stopDaddy = null 
    const date = function(str){ 
 
         console.log(str,Date.now()); 
    }
 
-  const stopDaddy = setInterval(date,1000,'Tanjumul'); 
+  
 
+   const starting = document.querySelector("#start").addEventListener('click',function(e){
+
+    stopDaddy = setInterval(date,3000,'Tanjumul'); 
+
+   })
+
+ const stopping = document.querySelector("#stop").addEventListener('click', function(e){
+  clearInterval(stopDaddy);
+
+   })
 //
-    clearInterval(stopDaddy);
+  
+
+
   </script>
 </body>
 </html>
