@@ -7,7 +7,7 @@
 </head>
 <body>
   <h1>Tanjumul's paradise of Code ! </h1>
-    
+    <button id="stop">Stop</button>
   <script>
     console.log('Tanjumul 1'); 
       setTimeout(function(){
@@ -33,8 +33,13 @@
           document.querySelector('h1').innerHTML = "Buy Tanjumul's ML course Now ! ";
         }
 
-          setInterval(promotion,3000);
-
+       const changeMe =   setTimeout(promotion,3000);
+     document.querySelector('#stop').addEventListener('click', function(e){
+      clearTimeout(changeMe);
+      console.log('stopped'); 
+     })
+     
+      
   </script>
 </body>
 </html>
