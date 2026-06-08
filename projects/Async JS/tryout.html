@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  :root {
+    --hue: 255;  /* Try 110 (green), 255 (purple), 220 (blue) */
+    --first-color: hsl(var(--hue), 75%, 60%);
+    --body-color: hsl(var(--hue), 12%, 4%);
+  }
+
+  body {
+    background: var(--body-color);
+    min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+  
+  }
+
+  /* LAYER 2: Blur blobs */
+  .blob {
+    position: fixed;
+    border-radius: 60%;
+    z-index:0;
+    pointer-events: none;
+  }
+  
+  .blob-1 {
+    width: 300px;
+    height: 300px;
+    background: var(--first-color);
+    top: -100px;
+    left: -100px;
+    filter:blur(100px); 
+  }
+  
+  .blob-2 {
+    width: 400px;
+    height: 400px;
+    background: hsl(var(--hue), 80%, 50%);
+    bottom: -150px;
+    right: -150px;
+    filter: blur(100px);
+  }
+
+  /* LAYER 3: Glass container */
+  .glass {
+    position: absolute;
+    top:50%;
+    left:50%;
+     width: 100%;
+    transform: translate(-50%, -40%);
+    z-index: 1;
+    max-width: 1200px;
+    margin: 0 auto;  /* Equal left/right spacing! */
+    padding: 2rem;
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(90px);
+    border-radius: 20px;
+    border: 1px dotted rgba(255, 255, 255, 0.1);
+  
+    
+  }
+
+  /* LAYER 4: Content */
+  .content {
+    color: white;
+    text-align: center;
+
+  }
+</style>
+</head>
+<body>
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+  
+  <div class="glass">
+    <div class="content">
+      <h1>Glass Background Effect</h1>
+      <p>The dark background shows through the blur and transparency</p>
+    </div>
+  </div>
+</body>
+</html>
