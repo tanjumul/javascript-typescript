@@ -1,3 +1,3 @@
 let  obj = {
-  name : 'Tanjumul'; 
+  name : 'Tanjumul',
 }
