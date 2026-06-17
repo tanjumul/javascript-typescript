@@ -13,6 +13,7 @@ function* number(){
 
 }
 
+
 const val = number(); 
 
 const result = []; 
