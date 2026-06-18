@@ -10,3 +10,5 @@ const randomColor = function (){
 return color; 
 
 }
+
+setInterval(randomColor,1000);
