@@ -12,7 +12,7 @@ return color;
 
 
 }
-
+ 
 
 
 let colorSelect = document.querySelector('#start').addEventListener('click',function(e){ 
