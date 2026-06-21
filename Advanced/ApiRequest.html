@@ -6,13 +6,25 @@
   <title>Documentation</title>
 </head>
 <body style=" background-color:#212121; color:white;">
-  0.
-  1.
-  2.
-  3.
-  4.
+
+ <h2 class="jokes" id="jj"></h2>
+
 </body>
 <script>
+async function learnAPI() {
+ 
+  const url = "https://official-joke-api.appspot.com/random_joke";
+  
+  const response = await fetch(url);
+  const joke = await response.json();
+  
 
+  const word_jokes = document.getElementById('jj')
+  word_jokes.innerHTML = `<h1>${joke.setup}</h1> <br> <h2>${joke.punchline}</h2>`;
+
+
+}
+
+learnAPI();
 </script>
 </html>
