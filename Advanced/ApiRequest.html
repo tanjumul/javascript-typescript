@@ -11,31 +11,44 @@
 
 </body>
 <script>
-// async function learnAPI() {
+async function learnAPI() {
  
-//   const url = "https://official-joke-api.appspot.com/random_joke";
+  const url = "https://official-joke-api.appspot.com/random_joke";
   
-//   const response = await fetch(url);
-//   const joke = await response.json();
+  const response = await fetch(url);
+  const joke = await response.json();
   
+// const response1 = await fetch(urls); 
+// const jokees = await response1.json; 
 
-//   const word_jokes = document.getElementById('jj')
-//   word_jokes.innerHTML = `<h1>${joke.setup}</h1> <br> <h2>${joke.punchline}</h2>`;
+
+  const word_jokes = document.getElementById('jj')
+  word_jokes.innerHTML = `<h1>${joke.setup}</h1> <br> <h2>${joke.punchline}</h2>`;
 
 
-// }
+}
 
 
 //avoid : xhr 
 
-const requestUrl = 'https://api.github.com/users/'
+const requestUrl = 'https://api.github.com/users/tanjumul'
 
 const xhr = new XMLHttpRequest();
 
-xhr.open('GET', 'https://api.github.com/users/tanjumul'); 
+xhr.open('GET', requestUrl); 
 
-xhr.open('GET',requestUrl)
 xhr.send();
+
+
+xhr.onreadystatechange = function (){ 
+  if(xhr.readyState === 4){ 
+    const data_tanjumul = JSON.parse(this.responseText);
+    console.log(data_tanjumul.followers)
+  console.log(this.responseText);
+
+  }
+}
+
 console.log('here');
 learnAPI();
 </script>
