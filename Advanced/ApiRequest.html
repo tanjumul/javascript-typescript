@@ -3,53 +3,360 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Documentation</title>
+  <title>GitHub Profile Card</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #0d1117;
+      color: #e6edf3;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    /* Joke Card - New Styling */
+    .joke-container {
+      background: linear-gradient(145deg, #161b22, #1c2333);
+      border: 1px solid #30363d;
+      border-radius: 16px;
+      padding: 20px 24px;
+      max-width: 420px;
+      width: 100%;
+      margin-bottom: 24px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+      transition: transform 0.2s ease;
+    }
+
+    .joke-container:hover {
+      transform: scale(1.02);
+    }
+
+    .joke-row {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 16px;
+      justify-content: space-between;
+    }
+
+    .joke-item {
+      flex: 1;
+      padding: 12px 16px;
+      border: 2px solid #30363d;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.03);
+      transition: all 0.3s ease;
+      min-height: 60px;
+      display: flex;
+      align-items: center;
+    }
+
+    .joke-item:hover {
+      border-color: #58a6ff;
+      background: rgba(88, 166, 255, 0.05);
+      box-shadow: 0 0 20px rgba(88, 166, 255, 0.1);
+    }
+
+    .joke-item .label {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: #8b949e;
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .joke-item .content {
+      font-size: 15px;
+      color: #f0f6fc;
+      font-weight: 400;
+      line-height: 1.4;
+    }
+
+    .joke-item .content.setup {
+      color: #58a6ff;
+      font-weight: 500;
+    }
+
+    .joke-item .content.punchline {
+      color: #f0883e;
+      font-weight: 500;
+    }
+
+    .joke-emoji {
+      font-size: 24px;
+      margin-right: 8px;
+    }
+
+    /* Divider between joke items */
+    .joke-divider {
+      color: #30363d;
+      font-size: 20px;
+      font-weight: 300;
+      padding: 0 4px;
+    }
+
+    /* Card Container */
+    .cart {
+      background: linear-gradient(145deg, #161b22, #1c2333);
+      border: 1px solid #30363d;
+      border-radius: 24px;
+      padding: 32px;
+      max-width: 420px;
+      width: 100%;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6), 
+                  inset 0 1px 0 rgba(255, 255, 255, 0.05);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .cart:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 48px rgba(0, 0, 0, 0.8);
+    }
+
+    /* Profile Section */
+    .profile-header {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      margin-bottom: 24px;
+    }
+
+    .avatar {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      border: 3px solid #30363d;
+      background: #21262d;
+      flex-shrink: 0;
+      overflow: hidden;
+    }
+
+    .avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .user-info {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .user-info .name {
+      font-size: 20px;
+      font-weight: 600;
+      color: #f0f6fc;
+      margin-bottom: 4px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .user-info .username {
+      font-size: 14px;
+      color: #8b949e;
+      font-weight: 400;
+    }
+
+    .user-info .bio {
+      font-size: 13px;
+      color: #8b949e;
+      margin-top: 6px;
+      line-height: 1.5;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    /* Stats Grid */
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-top: 20px;
+      padding-top: 20px;
+      border-top: 1px solid #30363d;
+    }
+
+    .stat-item {
+      text-align: center;
+      padding: 12px 8px;
+      background: rgba(255, 255, 255, 0.03);
+      border-radius: 12px;
+      border: 1px solid transparent;
+      transition: all 0.2s ease;
+    }
+
+    .stat-item:hover {
+      background: rgba(255, 255, 255, 0.06);
+      border-color: #30363d;
+    }
+
+    .stat-item .number {
+      font-size: 22px;
+      font-weight: 700;
+      color: #f0f6fc;
+      display: block;
+      line-height: 1.2;
+    }
+
+    .stat-item .label {
+      font-size: 11px;
+      color: #8b949e;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-top: 4px;
+      display: block;
+    }
+
+    /* Responsive */
+    @media (max-width: 480px) {
+      .joke-row {
+        flex-direction: column;
+        gap: 12px;
+      }
+      
+      .joke-divider {
+        display: none;
+      }
+      
+      .joke-item {
+        width: 100%;
+      }
+      
+      .cart {
+        padding: 20px;
+      }
+      
+      .profile-header {
+        flex-direction: column;
+        text-align: center;
+      }
+      
+      .avatar {
+        width: 100px;
+        height: 100px;
+      }
+      
+      .stats-grid {
+        gap: 8px;
+      }
+      
+      .stat-item .number {
+        font-size: 18px;
+      }
+    }
+  </style>
 </head>
-<body style=" background-color:#212121; color:white;">
+<body>
+  <!-- Joke Container -->
+  <div class="joke-container" id="jj">
+    <!-- Will be filled by JavaScript -->
+  </div>
+  
+  <div class="cart">
+    <!-- This will be filled by JavaScript -->
+  </div>
 
- <h2 class="jokes" id="jj"></h2>
+  <script>
+    // Your jokes API call
+    async function learnAPI() {
+      const url = "https://official-joke-api.appspot.com/random_joke";
+      const response = await fetch(url);
+      const joke = await response.json();
+      const jokeContainer = document.getElementById('jj');
+      
+      // New styled joke layout
+      jokeContainer.innerHTML = `
+        <div class="joke-row">
+          <div class="joke-item">
+            <div>
+              <span class="label">🤔 Question</span>
+              <div class="content setup">${joke.setup}</div>
+            </div>
+          </div>
+          <span class="joke-divider">→</span>
+          <div class="joke-item">
+            <div>
+              <span class="label">😂 Punchline</span>
+              <div class="content punchline">${joke.punchline}</div>
+            </div>
+          </div>
+        </div>
+      `;
+    }
 
+    // GitHub API call
+    const xhr = new XMLHttpRequest();
+    const requestUrl = 'https://api.github.com/users/tanjumul';
+
+    xhr.open('GET', requestUrl);
+    // No token needed for public data!
+    // xhr.setRequestHeader('Authorization', '');
+
+    xhr.onreadystatechange = function () {
+      if (xhr.readyState === 4) {
+        const card = document.querySelector('.cart');
+        
+        if (xhr.status === 200) {
+          const data = JSON.parse(this.responseText);
+          
+          card.innerHTML = `
+            <div class="profile-header">
+              <div class="avatar">
+                <img src="${data.avatar_url}" alt="${data.login}">
+              </div>
+              <div class="user-info">
+                <div class="name">${data.name || data.login}</div>
+                <div class="username">@${data.login}</div>
+                <div class="bio">${data.bio || 'No bio available'}</div>
+              </div>
+            </div>
+            <div class="stats-grid">
+              <div class="stat-item">
+                <span class="number">${data.followers}</span>
+                <span class="label">Followers</span>
+              </div>
+              <div class="stat-item">
+                <span class="number">${data.following}</span>
+                <span class="label">Following</span>
+              </div>
+              <div class="stat-item">
+                <span class="number">${data.public_repos}</span>
+                <span class="label">Repositories</span>
+              </div>
+            </div>
+          `;
+          
+          console.log('✅ User data loaded:', data);
+        } else {
+          // Error state
+          card.innerHTML = `
+            <div style="padding: 40px 20px; text-align: center; color: #f85149;">
+              <div style="font-size: 40px; margin-bottom: 12px;">⚠️</div>
+              <div style="font-weight: 500; margin-bottom: 8px;">Failed to load profile</div>
+              <div style="font-size: 13px; color: #8b949e;">${this.responseText}</div>
+            </div>
+          `;
+          console.error('❌ Request failed:', this.status, this.responseText);
+        }
+      }
+    };
+
+    xhr.send();
+    learnAPI();
+  </script>
 </body>
-<script>
-async function learnAPI() {
- 
-  const url = "https://official-joke-api.appspot.com/random_joke";
-  
-  const response = await fetch(url);
-  const joke = await response.json();
-  
-// const response1 = await fetch(urls); 
-// const jokees = await response1.json; 
-
-
-  const word_jokes = document.getElementById('jj')
-  word_jokes.innerHTML = `<h1>${joke.setup}</h1> <br> <h2>${joke.punchline}</h2>`;
-
-
-}
-
-
-//avoid : xhr 
-
-const requestUrl = 'https://api.github.com/users/tanjumul'
-
-const xhr = new XMLHttpRequest();
-
-xhr.open('GET', requestUrl); 
-
-xhr.send();
-
-
-xhr.onreadystatechange = function (){ 
-  if(xhr.readyState === 4){ 
-    const data_tanjumul = JSON.parse(this.responseText);
-    console.log(data_tanjumul.followers)
-  console.log(this.responseText);
-
-  }
-}
-
-console.log('here');
-learnAPI();
-</script>
 </html>
