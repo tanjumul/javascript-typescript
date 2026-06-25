@@ -375,4 +375,5 @@ promiseWithTimeout(slowOperation, 2000)
         console.error("⏰", error.message);
     });
 
-console.log("\n🎯 All promise examples executed successfully!");
+console.log("\n🎯 All promise examples executed successfully!"); 
+//new attention 
