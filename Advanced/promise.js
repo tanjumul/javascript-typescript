@@ -355,9 +355,7 @@ function promiseWithTimeout(promise, timeoutMs) {
                 clearTimeout(timeout);
                 resolve(result);
             })
-            .catch(error => {
-                clearTimeout(timeout);
-                reject(error);
+           
             });
     });
 }
