@@ -355,7 +355,7 @@ function promiseWithTimeout(promise, timeoutMs) {
                 clearTimeout(timeout);
                 resolve(result);
             })
-           
+           return timeout; 
             });
     });
 }
