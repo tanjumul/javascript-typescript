@@ -356,10 +356,16 @@ function promiseWithTimeout(promise, timeoutMs) {
                 resolve(result);
             })
            return timeout; 
+
+  
             });
     });
 }
 
+function timelimit(n){ 
+  limit = n*2; 
+  
+}
 // Test with a slow promise
 const slowOperation = new Promise((resolve) => {
     setTimeout(() => resolve("Slow operation complete"), 3000);
