@@ -14,10 +14,13 @@ const user = {
   username : 'Tanjumul', 
   loginCount : 33, 
   signedIn : true ,
-
+ 
   getUserDetails : function(){ 
-    console.log("Got user details!");
+    // console.log("Got user details!");
+    console.log(this); 
   }
+
+
 }
 
 console.log(user.username); 
