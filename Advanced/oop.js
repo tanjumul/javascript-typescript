@@ -10,3 +10,10 @@
  */
 
 
+const user = { 
+  username : 'Tanjumul', 
+  loginCount : 33, 
+  signedIn : true
+}
+
+console.log(user.username); 
