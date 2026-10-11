@@ -9,5 +9,12 @@ const myObject = {
 // for itarating here in object we can use the for in loop , coz with the for of loop it dosen't work 
 
 for(const key in myObject){ 
-  console.log(key); 
+  console.log(`${key} shortcut is for ${myObject[key]}`); 
+} 
+
+const programming = [ "js" , "cpp", "py" ]
+
+for(const key in programming){ 
+  console.log(programming[key]); 
+  
 }
