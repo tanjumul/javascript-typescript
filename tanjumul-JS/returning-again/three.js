@@ -27,3 +27,18 @@ console.log(map);
 for( const key of map){ 
   console.log(key); 
 }
+
+
+for(const [key , value] of map){ 
+  console.log(`They key is ${key} :- value will ${value}`);
+}
+
+const myObject = { 
+  'game1' : 'PUBG', 
+  'game2' : 'SpiderMan'
+}
+
+
+for(const [key , value] of myObject){
+  console.log(key , ':-' , value)
+}
