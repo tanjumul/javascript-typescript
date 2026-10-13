@@ -15,4 +15,6 @@ function justPrint(print){
   console.log(print);
 }
 
-printMe.forEach(justPrint);
+printMe.forEach(justPrint); 
+
+user_base = ['torrent','brave','spotify']; 
