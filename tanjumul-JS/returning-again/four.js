@@ -16,5 +16,4 @@ const programming = [ "js" , "cpp", "py" ]
 
 for(const key in programming){ 
   console.log(programming[key]); 
-  
 }
