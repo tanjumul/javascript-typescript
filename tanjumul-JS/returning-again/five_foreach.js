@@ -43,7 +43,9 @@ const myCoding = [
 ]
 
 myCoding.forEach((item)=>{ 
+
   console.log(item.languageFileName); 
   console.log('AND');
   console.log(item.languageName); 
+
 })
