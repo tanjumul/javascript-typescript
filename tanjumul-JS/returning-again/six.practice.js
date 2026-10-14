@@ -61,5 +61,14 @@ const books = [
 
 
 books.forEach((itms)=>{ 
-  console.log(`Book title : ${itms.title} & Publishing Year : ${itms.publishingYear}`); 
+  console.log(itms.title); 
 })
+
+let count_books = 0; 
+const countBooks = books.forEach((items)=>{
+if (items.publishingYear >= 2010){ 
+  count_books++;  
+}
+})
+
+console.log(count_books); 
