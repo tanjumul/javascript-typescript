@@ -103,5 +103,6 @@ books.filter((items)=>{
   }
 })
 
-books.filter((itm)=> itm.publishingYear === 2000 )
-console.log(itm); 
+const comparing_against = books.filter((itm)=> itm.publishingYear === 2007 && itm.genre === 'Fantasy' )
+console.log(comparing_against); 
+
