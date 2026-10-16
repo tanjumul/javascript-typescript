@@ -72,3 +72,36 @@ if (items.publishingYear >= 2010){
 })
 
 console.log(count_books); 
+
+
+const publishedBooks = books.filter((items) => {
+    return items.publishingYear >= 2010;
+});
+
+console.log(publishedBooks);
+
+
+// let arr = []
+// const userBooks = books.filter((bk)=>{ 
+//  if (bk.genre === 'Programming'){ 
+//   arr.push(bk);
+//  }
+// })
+
+let arr = []; 
+books.forEach((itm)=>{ 
+if(itm.genre === "Programming"){
+  arr.push(itm);
+}});
+
+console.log(arr); 
+
+
+books.filter((items)=>{ 
+  if(items.publishingYear > 1990 && items.genre === "Fantasy"){ 
+    console.log(items);
+  }
+})
+
+books.filter((itm)=> itm.publishingYear === 2000 )
+console.log(itm); 
