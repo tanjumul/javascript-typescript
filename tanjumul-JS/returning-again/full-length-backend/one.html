@@ -1,20 +1,32 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DOM</title>
+    <title>DOM Practice</title>
+
     <style>
-       .bg-black{
-        background-color: #212121;
-        color:#ffff;
-       }
+        .bg-black {
+            background-color: #212121;
+            color: #ffff;
+        }
     </style>
 </head>
+
 <body class="bg-black">
-    <div >
-        <div id="title" class="heading">DOM is very fun to understand , <span>but challenging</span></div>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, reprehenderit?</p>
+
+    <div>
+        <div id="title" class="heading">
+            DOM is very fun to understand, 
+            <span>but challenging</span>
+        </div>
+
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Illo, reprehenderit?
+        </p>
+
         <h2>This is query selection point for all</h2>
         <h2>This is query selection point for all</h2>
         <h2>This is query selection point for all</h2>
@@ -22,31 +34,43 @@
         <h2>This is query selection point for all</h2>
 
         <ul>
-            <li>orange</li>
-            <li>Banana</li>
-            <li>lime</li>
+            <li class="list-items">orange</li>
+            <li class="list-items">Banana</li>
+            <li class="list-items">lime</li>
         </ul>
     </div>
+
+    <script>
+        // Selecting the UL element
+        const myul = document.querySelector('ul');
+
+        // Selecting the first LI element
+        const orange = myul.querySelector('li');
+
+        // Modifying the orange element
+        orange.style.backgroundColor = 'orange';
+        orange.style.padding = '15px';
+
+        console.log(orange.innerText);
+
+
+        // Selecting all elements with the class 'list-items'
+        const commonlist = document.getElementsByClassName('list-items');
+
+        // Converting HTMLCollection into an Array
+        const arrList = Array.from(commonlist);
+
+        // Iterating through the array
+        arrList.forEach((k) => {
+            console.log(k);
+        });
+
+        // Changing the text color of all list items
+        arrList.forEach((k) => {
+            k.style.color = 'red';
+        });
+
+    </script>
+
 </body>
-<script>
-    /*orange.padding = '30px'
-VM2208:1 Uncaught ReferenceError: orange is not defined
-    at <anonymous>:1:1
-(anonymous) @ VM2208:1
-orange.innerText 
-VM2273:1 Uncaught ReferenceError: orange is not defined
-    at <anonymous>:1:1
-(anonymous) @ VM2273:1
-const myul = document.querySelector('ul')
-undefined
-const orange = myul.querySelector('li')
-undefined
-orange.style.backgroundColor = 'orange'; 
-'orange'
-orange.style.padding = '15px'; 
-'15px'
-orange.innerText; 
-'orange'
- */
-</script>
 </html>
