@@ -16,3 +16,31 @@ teas[2] = "tanjumul";
  for(let i = 0; i<=3 ; i++){ 
     console.log(teas[i]);
  }
+
+ //pusing another citiy in the array 
+
+ cities.push("Sylhet"); 
+ console.log(cities); 
+
+ //hard and soft copy 
+
+ //soft copy
+ let arr = ["Sust","just","DU"]; 
+ let another_arr = arr; 
+ console.log(another_arr); 
+ arr.pop();
+ console.log(arr)
+ console.log(another_arr);
+
+ //hard copy
+let arr1 = ["Milk", "tea", "biscuites"];
+
+let another_arr1 = [...arr1];
+
+arr1.pop();
+
+console.log(arr1);
+console.log(another_arr1);
+/** i manupulated on the first array in the arr1 but not in the second array another_arr1 so 
+ * it's not going to change on this.
+ */
