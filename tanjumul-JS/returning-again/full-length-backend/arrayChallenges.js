@@ -44,3 +44,8 @@ console.log(another_arr1);
 /** i manupulated on the first array in the arr1 but not in the second array another_arr1 so 
  * it's not going to change on this.
  */
+
+//check if it's in the array!
+let europian_cities = ["spain","france","Germany"]; 
+let find_out = europian_cities.includes("Spain"); 
+console.log(find_out); 
