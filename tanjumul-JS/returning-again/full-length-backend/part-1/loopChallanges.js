@@ -60,7 +60,7 @@ console.log(available_tea);
 
 let number = [2,5,7,9]; 
 let doubleNumber = []; 
-for(let i = 0 ; i<= number.length-1; i++){
+for(let i = 0 ; i< number.length; i++){
     if(number[i] === 7){
         continue;
     }
@@ -68,3 +68,15 @@ for(let i = 0 ; i<= number.length-1; i++){
 }
 
 console.log(doubleNumber);
+
+let Tees = ["Chai","green tea", "black tee", "jasmine tea","herbal tea"]; 
+let short_tees = [];
+
+for(len of Tees){ 
+    if(len.length > 10){
+        break;
+    }
+short_tees.push(len); 
+}
+
+console.log(short_tees);
