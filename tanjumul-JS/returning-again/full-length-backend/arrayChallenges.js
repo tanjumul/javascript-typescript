@@ -68,3 +68,13 @@ while (j<=6){
     j++; 
 }
 console.log(x_count); 
+
+let new_nodeCity = ["Germany", "Paris" , "Tennessy" , "Texas","Fankfruit"]
+let top_city = [];
+for (let i = 0; i < new_nodeCity.length; i++) {
+
+   top_city.push(new_nodeCity[i]); 
+   
+}
+
+console.log(top_city);
