@@ -49,3 +49,22 @@ console.log(another_arr1);
 let europian_cities = ["spain","france","Germany"]; 
 let find_out = europian_cities.includes("Spain"); 
 console.log(find_out); 
+
+let sum = 0; 
+let num = 1
+
+while(num <= 5){ 
+   
+   sum = sum+num; 
+   num++;
+}
+console.log(sum); 
+
+
+let j = 1 ; 
+let x_count = [];
+while (j<=6){ 
+    x_count.push(j); 
+    j++; 
+}
+console.log(x_count); 
