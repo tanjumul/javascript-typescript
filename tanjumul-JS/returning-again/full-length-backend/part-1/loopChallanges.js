@@ -14,3 +14,13 @@ for (let i = 0; i < teaCollection.length; i++) {
 // }
 }
 console.log(selectedTea); 
+
+let more_tea = ["cha", "green tea","harbaltee","black tee"]; 
+let teas = [];
+for(let num of more_tea){ 
+if(num === "harbaltee"){
+    continue;
+}
+teas.push(num)
+}
+console.log(teas);
