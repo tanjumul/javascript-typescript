@@ -24,3 +24,21 @@ if(num === "harbaltee"){
 teas.push(num)
 }
 console.log(teas);
+
+let city_population = { 
+    London : "1284783", 
+    NewYork : "233322", 
+    Berlin : "233321124", 
+    Paris : "8363020",
+}; 
+
+let NewCity = {}; 
+
+for(city in city_population ){
+
+    if(city === "Berlin"){ 
+        continue; 
+    }
+        NewCity[city] = city_population[city]; 
+}
+console.log(NewCity.Paris); 
