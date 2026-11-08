@@ -56,3 +56,15 @@ block_tea.forEach((e)=>{
 })
 
 console.log(available_tea);
+
+
+let number = [2,5,7,9]; 
+let doubleNumber = []; 
+for(let i = 0 ; i<= number.length-1; i++){
+    if(number[i] === 7){
+        continue;
+    }
+    doubleNumber.push(number[i]*2);
+}
+
+console.log(doubleNumber);
