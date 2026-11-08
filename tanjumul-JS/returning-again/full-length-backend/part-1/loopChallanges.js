@@ -42,3 +42,17 @@ for(city in city_population ){
         NewCity[city] = city_population[city]; 
 }
 console.log(NewCity.Paris); 
+
+
+let block_tea = ["cha", "green tea","harbaltee","black tee"]; 
+
+let available_tea = []; 
+
+block_tea.forEach((e)=>{ 
+    if(e === "harbaltee"){ 
+        return;
+    }
+    available_tea.push(e);
+})
+
+console.log(available_tea);
