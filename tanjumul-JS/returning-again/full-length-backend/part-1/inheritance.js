@@ -19,3 +19,26 @@ class Car extends vehicle {
 
 let myCar = new Car("Nissan","GTR"); 
 console.log(myCar.drive(), myCar.start()); 
+
+
+//Encapsulation; 
+
+class BankAccount {
+
+    #balance = 5000; 
+
+    deposite(amount){ 
+        this.#balance += amount; 
+        return this.#balance;
+    }
+
+gerBalance (){
+    return `Your balance is $ ${this.#balance}`;
+}
+
+}
+
+let account = new BankAccount(); 
+
+console.log(account.gerBalance()); 
+
