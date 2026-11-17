@@ -39,3 +39,16 @@ document.getElementById('changeOrder').addEventListener("click", function(){
     coffeeType.style.margin = "10px";
 
 })
+
+//#solution 4 
+
+document.getElementById("addNewItem").addEventListener("click", function(){
+
+let newInput = document.createElement("li"); 
+
+newInput.textContent = "Meats"; 
+
+document.getElementById("shoppingList").appendChild(newInput); 
+
+
+})
