@@ -20,6 +20,11 @@ let clickedd = document.getElementById('changeTextButton').addEventListener("cli
 
 document.getElementById('highlightFirstCity').addEventListener("click",function(){ 
    let citiesList = document.getElementById('citiesList');
-    
-   citiesList.firstElementChild.style.backgroundColor = "green"; 
+   //citiesList.firstElementChild.style.backgroundColor = "green"; 
+
+  console.log(citiesList.firstElementChild.classList);
+   
+   
+   
+   
 }); 
