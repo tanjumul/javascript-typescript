@@ -23,9 +23,19 @@ document.getElementById('highlightFirstCity').addEventListener("click",function(
    //citiesList.firstElementChild.style.backgroundColor = "green"; 
 
   citiesList.firstElementChild.classList.add("highlight"); 
-  
-   
-   
-   
    
 }); 
+
+//#3 solution : 
+
+document.getElementById('changeOrder').addEventListener("click", function(){
+
+    let coffeeType = document.getElementById('coffeeType');
+
+    coffeeType.textContent = "Espresso"; 
+    coffeeType.style.background = "brown"; 
+    coffeeType.style.padding = "5px";
+    coffeeType.style.display = "inline-block"
+    coffeeType.style.margin = "10px";
+
+})
