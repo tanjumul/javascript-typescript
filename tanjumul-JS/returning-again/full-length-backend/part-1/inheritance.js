@@ -9,7 +9,6 @@ function Person(name) {
 Person.prototype.speak = function() {
     return `Hello, I am ${this.name}`;
 };
-
 // Creating an object
 let user = new Person("Tanjumul");
 
@@ -125,4 +124,4 @@ let Cow = new cow();
 
 console.log(bird.fly("Kokil"));
 console.log(penguine.fly());
-console.log(Cow.fly()) 
+console.log(Cow.fly()); 
