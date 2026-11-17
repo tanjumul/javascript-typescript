@@ -22,7 +22,8 @@ document.getElementById('highlightFirstCity').addEventListener("click",function(
    let citiesList = document.getElementById('citiesList');
    //citiesList.firstElementChild.style.backgroundColor = "green"; 
 
-  console.log(citiesList.firstElementChild.classList);
+  citiesList.firstElementChild.classList.add("highlight"); 
+  
    
    
    
