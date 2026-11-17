@@ -1,3 +1,4 @@
+// #1 solution : 
 
 let isChanged = false; 
 
@@ -15,3 +16,10 @@ let clickedd = document.getElementById('changeTextButton').addEventListener("cli
 
 })
 
+// #2 solution : 
+
+document.getElementById('highlightFirstCity').addEventListener("click",function(){ 
+   let citiesList = document.getElementById('citiesList');
+    
+   citiesList.firstElementChild.style.backgroundColor = "green"; 
+}); 
